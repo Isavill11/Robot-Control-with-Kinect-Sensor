@@ -5,12 +5,13 @@ import numpy as np
 from pykinect2024 import PyKinect2024, PyKinectRuntime
 
 
-frame_rate = 1
-DATA_DIR = 'data3' #Change this to make a new file for the data.
-CLASSES = ['Person', 'Robot']
+FRAME_RATE = 30
+DATA_DIR = 'new_data' #Change this to make a new file for the data.
+CLASSES = ['1', '2']
 DATASET_SIZE = 40 #This is the data size.
 
 kinect_runtime = PyKinectRuntime.PyKinectRuntime(PyKinectRuntime.FrameSourceTypes_Color | PyKinectRuntime.FrameSourceTypes_Depth)
+
 
 def kinect_color_frame():
     color_frame = kinect_runtime.get_last_color_frame()
@@ -19,12 +20,11 @@ def kinect_color_frame():
     resized_color_image = cv2.resize(color_image, (640, 480))
     return resized_color_image
 
-# Make a data file
+# Make a data file, if theres alr one dont make it
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
-# Make a class file inside the data file.
-# If a class file already exists, don't make one
+# Make a class file inside the data file. if theres alr one dont make it
 for class_name in CLASSES:
     class_dir = os.path.join(DATA_DIR, class_name)
     if not os.path.exists(class_dir):
@@ -55,13 +55,11 @@ for class_idx, class_name in enumerate(CLASSES):
                 break
 
     #start storing data
-
     counter = 0
     while counter < DATASET_SIZE:
 
         if cv2.waitKey(25) == ord('f'):
             quit()
-            cv2.destroyAllWindows()
 
         start_time = time.time()
 
@@ -76,15 +74,13 @@ for class_idx, class_name in enumerate(CLASSES):
             cv2.imshow("Frame", kinect_frame)
 
         time_passed = time.time() - start_time
-        sleep_time = max(1.0 / frame_rate - time_passed, 0)
+        sleep_time = 1
         time.sleep(sleep_time)
 
         if cv2.waitKey(25) == ord('q'):
             break
 
-
 cv2.destroyAllWindows()
-
 
 
 #PRESS F TO QUIT CODE.
