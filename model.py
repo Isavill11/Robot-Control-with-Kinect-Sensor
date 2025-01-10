@@ -14,6 +14,7 @@ import ultralytics
 from ultralytics import *
 from collections import defaultdict
 import supervision as sv
+import yaml
 import random
 import os
 import shutil
@@ -60,10 +61,10 @@ def split_dataset(base_path, train_ratio=0.8, val_ratio=0.2, background_dir='./b
     copy_files(val_files, 'val')
 
 #split the dataset into corresponding images and labels
-split_dataset('path for data source file')
+split_dataset('C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo')
 
 class_count = Counter()
-label_path = 'source path/labels'
+label_path = 'C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo/labels'
 
 ## counts all the classes in the database and assigns then a number
 for filename in os.listdir(label_path):
@@ -94,29 +95,28 @@ counts = list(class_counts_names.values())
 
 
 ###Model creation
-import yaml
 
-data = {"path": "/content/drive/MyDrive/Glove Data",
-        "train": "/content/drive/MyDrive/Glove Data/train",
-        "val": "/content/drive/MyDrive/Glove Data/val",
+datass = {"path": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo",
+        "train": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo/train",
+        "val": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo/val",
         "nc": len(classes),
         "names":classes
 }
-with open("data.yaml", "w") as f:
-  yaml.dump(data, f)
+with open("data.yaml", "w") as f:   ##this is where u rename the .yaml file name.
+  yaml.dump(datass, f)
 
 model = YOLO("yolov8n.pt", task="detect")
 
-results = model.train(data='/content/data.yaml', epochs=5)
+results = model.train(data='C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data.yaml', epochs=80)  #put the name of the .yaml file
 
 
 ## predict new images
-image = '/content/45.jpg'
-model.predict(image, save=True, imgsz=640)
+# image = '/content/45.jpg'
+# model.predict(image, save=True, imgsz=640)
 
 
 
 ## load another model and transfer weights to imporve model accuracy
 
-model2 = YOLO("yolov8x.yaml").load('yolov8x.pt')#build off the best weights from the previous model apparently
-model2.train(data='/content/data.yaml', epochs=3)
+# model2 = YOLO("yolov8x.yaml").load('yolov8x.pt')#build off the best weights from the previous model apparently
+# model2.train(data='/content/data.yaml', epochs=3)
