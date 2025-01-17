@@ -64,14 +64,13 @@ for class_name in HAND_CLASSES:
                 for box in result.boxes:
                     confidence = box.conf[0]
                     obj_class = int(box.cls[0])
-                    if confidence >= 0.45:
-                        x1, y1, x2, y2 = map(int, box.xyxy[0])
-                        obj_class = int(box.cls[0])
 
-                        if OBJ_CLASSES[obj_class][0] == "Person":
-                            label = f"{OBJ_CLASSES[obj_class][0]} {confidence:.2f}"
-                            cv2.rectangle(frame, (x1, y1), (x2, y2), OBJ_CLASSES[obj_class][1], 2)
-                            cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, OBJ_CLASSES[obj_class][1], 2)
+                    ### only get the bounding boxes of a person object and if the confidence is high.
+                    if confidence >= 0.45 and OBJ_CLASSES[obj_class][0] == "Person":
+                        x1, y1, x2, y2 = map(int, box.xyxy[0])
+                        label = f"{OBJ_CLASSES[obj_class][0]} {confidence:.2f}"
+                        cv2.rectangle(frame, (x1, y1), (x2, y2), OBJ_CLASSES[obj_class][1], 2)
+                        cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, OBJ_CLASSES[obj_class][1], 2)
 
                         if not collecting:
                             cv2.putText(frame, 'Press Q to start collecting...', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
