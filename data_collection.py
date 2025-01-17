@@ -59,7 +59,7 @@ for class_idx, class_name in enumerate(CLASSES):
     while counter < DATASET_SIZE:
 
         if cv2.waitKey(25) == ord('f'):
-            quit()
+            break
 
         start_time = time.time()
 
@@ -77,8 +77,7 @@ for class_idx, class_name in enumerate(CLASSES):
         sleep_time = 1
         time.sleep(sleep_time)
 
-        if cv2.waitKey(25) == ord('q'):
-            break
+        
 
 cv2.destroyAllWindows()
 

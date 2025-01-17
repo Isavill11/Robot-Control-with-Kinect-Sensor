@@ -6,10 +6,11 @@ import time
 import subprocess
 
 CLASSES = {0: ["Person", (204,0,0)], #red
-           1: ["Robot", (0, 128, 255)], #blue
-           }
+           1: ["Robot", (0, 128, 255)],} #blue
+
 COLOR_TO_TRACK = {"lower_range": np.array([35, 80, 150]),
-                  "upper_range": np.array([85, 255, 255])} # the hsv range for the color i wish to track.
+                  "upper_range": np.array([85, 255, 255])} # the hsv range for light green
+
 model = YOLO("C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/runs/detect/train/weights/best.pt")
 
 # Initialize Kinect Runtime
@@ -57,7 +58,7 @@ while True:
         for box in result.boxes:
             ### every value of box in the result.boxes attribute is an object prediction.
             ### so to access every object we iterate through the .boxes attribute. then we access all info from it such as
-            ### confidence, class, bouding box coords, etc.
+            ### confidence, class, bounding box coords, etc.
             x1, y1, x2, y2 = map(int, box.xyxy[0]) #bounding boxes coordinates
             # if x1 < 0 or y1 < 0 or x2 > newest_frame.shape[1] or y2 > newest_frame.shape[0]:
             #     print("Invalid bounding box coordinates!")
