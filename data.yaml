@@ -1,0 +1,7 @@
+names:
+- person
+- robot
+nc: 2
+path: C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo
+train: C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo/train
+val: C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo/val
