@@ -8,7 +8,7 @@ import time
 # Constants
 FRAME_RATE = 1
 DATASET_SIZE = 20  # Per class
-BASE_DIR = 'hand_data'
+BASE_DIR = 'new_hand_data'
 HAND_CLASSES = ['A-start', 'B-stop', 'C-pos_1']
 OBJ_CLASSES = {0: ["Person", (204,0,0)], #red
                1: ["Robot", (0, 128, 255)], #blue
@@ -24,15 +24,21 @@ def kinect_color_frame():
     resized_color_image = cv2.resize(color_image, (640, 480))
     return resized_color_image
 
+def kinect_depth_frame():
+    depth_frame = kinect.get_last_depth_frame()
+    depth_image = np.frombuffer(depth_frame, dtype=np.uint16).reshape((1080, 1920))
+    depth_image = cv2.normalize(depth_image, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
+    return depth_image
+
 def process_and_save(frame, x1, y1, x2, y2, save_path, index):
     """Crop the frame to the AOI, resize, and save."""
     if x1 < 0 or y1 < 0 or x2 > frame.shape[1] or y2 > frame.shape[0]:
         print("Invalid bounding box coordinates!")
         return index
     aoi = frame[y1:y2, x1:x2]  # Crop AOI
-    zoomed_aoi = cv2.resize(aoi, (224, 224))  # Resize for consistency
+    # zoomed_aoi = cv2.resize(aoi, (224, 224))  # Resize for consistency
     file_path = os.path.join(save_path, f'image_{index:04d}.jpg')
-    cv2.imwrite(file_path, zoomed_aoi)
+    cv2.imwrite(file_path, aoi)
     return index + 1
 
 # Ensure directories exist
