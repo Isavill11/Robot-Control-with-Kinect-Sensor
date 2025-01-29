@@ -2,56 +2,69 @@ import ctypes
 import sys
 import time
 import numpy as np
-import open3dlite as o3d
+import cv2
 from pykinect2024 import PyKinect2024
-from pykinect2024.PyKinectRuntime import PyKinect2024
-from pykinect2024.PyKinectRuntime import PyKinectRuntime
+from pykinect2024 import PyKinectRuntime
+import os
+
+kinect_runtime = PyKinectRuntime.PyKinectRuntime(
+    PyKinectRuntime.FrameSourceTypes_Depth | PyKinectRuntime.FrameSourceTypes_Color)
 
 
-class KinectDepthReader:
-    def __init__(self):
-        # Open Kinect sensor
-        self.kinect = PyKinectRuntime.PyKinectV2().KinectSensor()
-        self.kinect.open()
+def kinect_depth_frame():
+    depth_frame = kinect_runtime.get_last_depth_frame()  # Get the depth frame
+    print(f"Depth frame raw data: {depth_frame[:10]}")  # Show first few values for debugging
 
-        # Open depth frame reader
-        self.depth_frame_reader = self.kinect.depth_frame_source.open_reader()
-        self.depth_frame_reader.frame_arrived += self.on_depth_frame
+    # Convert the depth frame into a numpy array
+    depth_image = np.frombuffer(depth_frame, dtype=np.uint16)  # 16-bit depth data
+    depth_image = depth_image.reshape((424, 512))  # Kinect One depth resolution (424x512)
 
-    def on_depth_frame(self, sender, args):
-        depth_frame = args.frame_reference.acquire_frame()
-        if depth_frame is not None:
-            # Convert the depth frame to a numpy array
-            depth_data = np.array(depth_frame.depth_pixels, dtype=np.uint16).reshape(
-                (depth_frame.frame_desc.height, depth_frame.frame_desc.width))
-            # Pass the depth data to Open3D
-            self.process_depth_data(depth_data)
+    # Resize the depth frame to match the color frame (640x480)
+    depth_image = cv2.resize(depth_image, (640, 480), interpolation=cv2.INTER_NEAREST)
 
-    def process_depth_data(self, depth_data):
-        # Create an Open3D depth image from the numpy array
-        depth_image = o3d.geometry.Image(depth_data)
+    # Optionally scale depth values to make them more visible (for display purposes)
+    depth_image = cv2.normalize(depth_image, None, 0, 255, cv2.NORM_MINMAX)
+    depth_image = np.uint8(depth_image)  # Convert back to uint8 for display
 
-        # Convert depth image to point cloud using a pinhole camera model
-        # Set the intrinsic parameters (you may need to adjust these for your specific Kinect model)
-        intrinsic = o3d.camera.PinholeCameraIntrinsic()
-        intrinsic.set_intrinsics(512, 424, 365.0, 365.0, 256.0, 212.0)
-
-        # Create point cloud from depth image
-        pcd = o3d.geometry.PointCloud.create_from_depth_image(depth_image, intrinsic)
-
-        # Visualize point cloud
-        o3d.visualization.draw_geometries([pcd])
-
-    def start(self):
-        print("Press Enter to exit...")
-        while True:
-            time.sleep(0.1)
-
-    def cleanup(self):
-        self.depth_frame_reader.stop()
+    return depth_image
 
 
-if __name__ == "__main__":
-    kinect_reader = KinectDepthReader()
-    kinect_reader.start()
-    kinect_reader.cleanup()
+def kinect_color_frame():
+    color_frame = kinect_runtime.get_last_color_frame()
+    print(f"Color frame raw data: {color_frame[:10]}")  # Show first few values for debugging
+
+    color_image = np.frombuffer(color_frame, dtype=np.uint8).reshape((1080, 1920, 4))
+    color_image = cv2.cvtColor(color_image, cv2.COLOR_BGRA2BGR)
+    resized_color_image = cv2.resize(color_image, (640, 480), interpolation=cv2.INTER_LINEAR)
+
+    return resized_color_image
+
+
+while True:
+    if kinect_runtime.has_new_depth_frame() and kinect_runtime.has_new_color_frame():  # Check if there's a new depth and color frame
+        depth_frame = kinect_depth_frame()  # Get the depth frame
+        color_frame = kinect_color_frame()  # Get the color frame
+
+        # Display the color and depth frames
+        print(f"Depth frame shape: {depth_frame.shape}, Color frame shape: {color_frame.shape}")  # Debug shapes
+        cv2.imshow('Color Frame', color_frame)
+        cv2.imshow('Depth Frame', depth_frame)
+
+        if cv2.waitKey(25) == ord('q'):  # Press 'q' to exit
+            break
+
+cv2.destroyAllWindows()  # Cleanup and close the window
+
+while True:
+    if kinect_runtime.has_new_depth_frame() and kinect_runtime.has_new_color_frame():  # Check if there's a new depth and color frame
+        depth_frame = kinect_depth_frame()  # Get the depth frame
+        color_frame = kinect_color_frame()  # Get the color frame
+
+        # Display both frames side by side
+        cv2.imshow('Color Frame', color_frame)
+        cv2.imshow('Depth Frame', depth_frame)
+
+        if cv2.waitKey(25) == ord('q'):  # Press 'q' to exit
+            break
+
+cv2.destroyAllWindows()  # Cleanup and close the window

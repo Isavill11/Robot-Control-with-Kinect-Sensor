@@ -7,11 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b3afc97-0b0a-4a54-a4f8-ed36951e1e89" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/mediapipe_model.py" afterDir="false" />
+    <list default="true" id="4b3afc97-0b0a-4a54-a4f8-ed36951e1e89" name="Changes" comment="collecting hand data for gesture rec">
+      <change afterPath="$PROJECT_DIR$/matlab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depth.py" beforeDir="false" afterPath="$PROJECT_DIR$/depth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hand_data_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/hand_data_collection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mediapipe_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/mediapipe_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +58,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.data_collection.executor": "Run",
+    "Python.depth.executor": "Run",
     "Python.hand_data_collection.executor": "Run",
     "Python.mediapipe_model.executor": "Run",
     "Python.model.executor": "Run",
@@ -96,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736279771468</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="collecting hand data for gesture rec">
+      <option name="closed" value="true" />
+      <created>1738006085262</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738006085262</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,7 +122,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="collecting hand data for gesture rec" />
+    <option name="LAST_COMMIT_MESSAGE" value="collecting hand data for gesture rec" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
