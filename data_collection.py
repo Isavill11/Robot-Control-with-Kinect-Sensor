@@ -6,7 +6,7 @@ from pykinect2024 import PyKinect2024, PyKinectRuntime
 
 
 FRAME_RATE = 30
-DATA_DIR = 'new_data' #Change this to make a new file for the data.
+DATA_DIR = 'object_detection_data'  #Change this to make a new file for the data.
 CLASSES = ['1', '2']
 DATASET_SIZE = 40 #This is the data size.
 

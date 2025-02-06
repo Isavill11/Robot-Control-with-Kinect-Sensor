@@ -61,10 +61,10 @@ def split_dataset(base_path, train_ratio=0.8, val_ratio=0.2, background_dir='./b
     copy_files(val_files, 'val')
 
 #split the dataset into corresponding images and labels
-split_dataset('C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo')
+split_dataset('All_Yolo_Data/annotated_OD_data_for_yolo')
 
 class_count = Counter()
-label_path = 'C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo/labels'
+label_path = 'All_Yolo_Data/annotated_OD_data_for_yolo/labels'
 
 ## counts all the classes in the database and assigns then a number
 for filename in os.listdir(label_path):
@@ -96,18 +96,18 @@ counts = list(class_counts_names.values())
 
 ###Model creation
 
-datass = {"path": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo",
-        "train": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo/train",
-        "val": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data_for_yolo/val",
+datass = {"path": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/All_Yolo_Data/annotated_OD_data_for_yolo",
+        "train": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/All_Yolo_Data/annotated_OD_data_for_yolo/train",
+        "val": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/All_Yolo_Data/annotated_OD_data_for_yolo/val",
         "nc": len(classes),
         "names":classes
 }
-with open("data.yaml", "w") as f:   ##this is where u rename the .yaml file name.
+with open("All_Yolo_Data/data.yaml", "w") as f:   ##this is where u rename the .yaml file name.
   yaml.dump(datass, f)
 
 model = YOLO("yolov8n.pt", task="detect")
 
-results = model.train(data='C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/data.yaml', epochs=80)  #put the name of the .yaml file
+results = model.train(data='C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/All_Yolo_Data/data.yaml', epochs=80)  #put the name of the .yaml file
 
 
 ## predict new images

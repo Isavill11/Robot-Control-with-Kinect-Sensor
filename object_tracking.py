@@ -48,10 +48,6 @@ frame_interval = 1 / frame_rate
 
 while True:
     newest_frame = get_latest_frame()
-    # if newest_frame is None:
-    #     print("No frame captured!")
-    #     continue
-
     results = model.predict(newest_frame, verbose = False)
 
     for result in results: #just gives us access to all the data.
