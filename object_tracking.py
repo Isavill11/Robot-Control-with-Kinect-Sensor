@@ -1,15 +1,22 @@
+
+
+
 from ultralytics import YOLO
+from ultralytics import YOLOWorld
 import cv2
 import numpy as np
 from pykinect2024 import PyKinect2024, PyKinectRuntime
 import time
 import subprocess
 
+
+
+
 CLASSES = {0: ["Person", (204,0,0)], #red
            1: ["Robot", (0, 128, 255)],} #blue
 
-COLOR_TO_TRACK = {"lower_range": np.array([35, 80, 150]),
-                  "upper_range": np.array([85, 255, 255])} # the hsv range for light green
+COLOR_TO_TRACK = {"lower_range": np.array([0, 0, 150]),
+                  "upper_range": np.array([0, 0, 255])} # the hsv range for light green
 
 model = YOLO("C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/runs/detect/train/weights/best.pt")
 
