@@ -1,68 +1,66 @@
-
+import mediapipe as mp
 import cv2
+import os
 import numpy as np
+import json
 from pykinect2024 import PyKinect2024, PyKinectRuntime
-import time
-import subprocess
 
+# MediaPipe setup
+mp_drawing = mp.solutions.drawing_utils
+mp_hands = mp.solutions.hands
 
-# Initialize Kinect Runtime
-kinect_runtime = PyKinectRuntime.PyKinectRuntime(PyKinectRuntime.FrameSourceTypes_Color | PyKinectRuntime.FrameSourceTypes_Depth)
+kinect = PyKinectRuntime.PyKinectRuntime(
+    PyKinectRuntime.FrameSourceTypes_Color | PyKinectRuntime.FrameSourceTypes_Depth)
 
-wait = input("Enter anything to start ")
-
-frame_rate = 30  # Set target frame rate (frames per second)
-
-while True:
-    #if there is a frame to collect, then collect it.
-    if kinect_runtime.has_new_color_frame() and kinect_runtime.has_new_depth_frame():
-        #get latest frame
-        color_frame = kinect_runtime.get_last_color_frame()
-        # depth_frame = kinect_runtime.get_last_depth_frame()
-        # process color from bgra to bgr then to hsv
-        #adjust frame from bgra to bgr then resize
+def get_latest_frame():
+    # if there is a frame to collect, then collect it.
+    if kinect.has_new_color_frame():
+        # get latest frame
+        color_frame = kinect.get_last_color_frame()
+        # adjust color from bgra to bgr then resize image
         color_image = np.frombuffer(color_frame, dtype=np.uint8).reshape((1080, 1920, 4))
         color_image = cv2.cvtColor(color_image, cv2.COLOR_BGRA2BGR)
-        resized_color_image = cv2.resize(color_image, (640, 480))
-        start_time = time.time()
+        new_frame = cv2.resize(color_image, (640, 480))
+        return new_frame
 
-        """
-        after getting the frame from the kinect, use yolo model to track the humans and robot in each frame. 
-        after doing so, then return the resulting frame and continue on with the code.
-        
-        track the colors INSIDE of the bounding boxes of the HUMANS on screen.
-        """
+# Define colors
+LANDMARK_COLOR = (0, 255, 0)  # Green
+CONNECTION_COLOR = (255, 0, 0)  # Blue
 
-        #what color I want to track.
-        hsv_color_frame = cv2.cvtColor(resized_color_image, cv2.COLOR_BGR2HSV)
-        color_lower = np.array([10, 150, 100], np.uint8)
-        color_upper = np.array([50, 255, 255], np.uint8)
-        color_mask = cv2.inRange(hsv_color_frame, color_lower, color_upper)
-        kernel = np.ones((5, 5), np.uint8)
-        color_mask = cv2.dilate(color_mask, kernel)
-        res_green = cv2.bitwise_and(resized_color_image, resized_color_image, mask=color_mask)
 
-        #find contours of the area
-        contours, hierarchy = cv2.findContours(color_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-        # draw bounding boxes around detected colored areas
-        for contour in contours:
-            area = cv2.contourArea(contour)
-            if area > 300:  # Ignore small areas
-                x, y, w, h = cv2.boundingRect(contour)
-                cv2.rectangle(resized_color_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+# Function to visualize landmarks on an image
+def draw_landmarks(image, landmarks, image_width, image_height):
+   for joint, coords in landmarks.items():
+       x, y = int(coords["x"] * image_width), int(coords["y"] * image_height)
+       cv2.circle(image, (x, y), 5, LANDMARK_COLOR, -1)  # Draw joint
 
-        # display the processed image
-        cv2.imshow('Kinect Color Frame', resized_color_image)
 
-        # fps is 30.
-        frame_time = time.time() - start_time
-        wait_time = max(1, int(1000 / frame_rate - frame_time * 1000))
+   # Draw connections between keypoints
+   hand_connections = mp_hands.HAND_CONNECTIONS
+   for connection in hand_connections:
+       joint1, joint2 = connection
+       joint1_name = mp_hands.HandLandmark(joint1).name  # Convert index to name
+       joint2_name = mp_hands.HandLandmark(joint2).name  # Convert index to name
+       if joint1_name in landmarks and joint2_name in landmarks:
+           x1, y1 = int(landmarks[joint1_name]["x"] * image_width), int(landmarks[joint1_name]["y"] * image_height)
+           x2, y2 = int(landmarks[joint2_name]["x"] * image_width), int(landmarks[joint2_name]["y"] * image_height)
+           cv2.line(image, (x1, y1), (x2, y2), CONNECTION_COLOR, 2)
 
-        if cv2.waitKey(wait_time) & 0xFF == ord('q'):
-            break
+while True:
+    try:
+        print("hi")
+        color_image = get_latest_frame()
+        image_height, image_width, _ = color_image.shape
 
-#end code
-kinect_runtime.close()
-cv2.destroyAllWindows()
+        with mp_hands.Hands(static_image_mode=True, max_num_hands=1, min_detection_confidence=0.5) as hands:
 
+                # Convert to RGB for MediaPipe
+                rgb_image = cv2.cvtColor(color_image, cv2.COLOR_BGR2RGB)
+                # Process with MediaPipe
+                results = hands.process(rgb_image)
+                print(results)
+                # if results.multi_hand_landmarks:
+                #     draw_landmarks(rgb_image, results, image_width, image_height)
+    except AttributeError as e:
+        print(f"Error: {e}")

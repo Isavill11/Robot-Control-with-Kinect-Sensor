@@ -5,23 +5,19 @@ import os
 import cv2
 import mediapipe as mp
 
-
 working_dir = os.getcwd()
 # Paths
-MAIN_PATH = working_dir + '/Gesture_Recognition_Data/hand_data'
+MAIN_PATH = working_dir + '/hand_data_extended'
 print(MAIN_PATH)
-JSON_PATH = working_dir + '/data_from_mediapipe222'  # Path where JSON files with landmarks are stored
-
+JSON_PATH = working_dir + '/hand_data_extended_from_mediapipe'  # Path where JSON files with landmarks are stored
 
 # MediaPipe drawing utils
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 
-
 # Define colors
 LANDMARK_COLOR = (0, 255, 0)  # Green
 CONNECTION_COLOR = (255, 0, 0)  # Blue
-
 
 
 
@@ -76,12 +72,7 @@ for gesture_class in os.listdir(JSON_PATH):
            print(f"Error loading image {image_name}")
            continue
 
-
-       # Get image dimensions
        image_height, image_width, _ = image.shape
-
-
-       # Draw landmarks
        draw_landmarks(image, data["landmarks"], image_width, image_height)
 
        cv2.namedWindow(f"{gesture_class} - {image_name}", cv2.WINDOW_NORMAL)
@@ -89,7 +80,12 @@ for gesture_class in os.listdir(JSON_PATH):
 
        # Display the image
        cv2.imshow(f"{gesture_class} - {image_name}", image)
-       cv2.waitKey(0)  # Press any key to move to the next image
 
+       key = cv2.waitKey(25)
+       if key == ord('q'):
+           cv2.destroyAllWindows()
+           quit()
+       else:
+           cv2.waitKey(0)
 
 cv2.destroyAllWindows()  # Close all OpenCV windows

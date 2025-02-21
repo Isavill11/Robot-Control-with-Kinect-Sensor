@@ -5,7 +5,7 @@ import pandas as pd
 
 working_dir = os.getcwd()
 # Define the path to the main JSON directory
-JSON_PATH = working_dir+'/data_from_mediapipe222'
+JSON_PATH = working_dir+'/hand_data_extended_from_mediapipe'
 
 data_list = []
 
@@ -42,6 +42,6 @@ df.columns = [col.replace('.', '_') for col in df.columns]
 print(df)
 for columns in df.columns:
    print(columns)
-df.to_csv('output_joint_file.csv', index=False)
+df.to_csv('output_joint_file_2.csv', index=False)
 
 

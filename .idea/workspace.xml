@@ -7,75 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b3afc97-0b0a-4a54-a4f8-ed36951e1e89" name="Changes" comment="Changing folder locations and adding an improved Mediapipe hand model!">
-      <change afterPath="$PROJECT_DIR$/joint_checking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Kinect_body_tracking_v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kinect_body_tracking_v2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4b3afc97-0b0a-4a54-a4f8-ed36951e1e89" name="Changes" comment="redoing mediapipe model, added file to double check the hand joints, added and renamed file to convert .json joints into a csv df!">
+      <change afterPath="$PROJECT_DIR$/gesture_rec_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_joint_file_2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_000.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_000.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_001.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_002.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_002.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_003.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_004.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_005.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_005.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_006.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_006.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_007.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_007.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_008.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_008.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_009.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_009.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_011.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_011.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_012.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_012.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_013.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_013.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_014.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_014.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_015.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_016.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_016.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/A-start/landmarks_019.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/A-start/landmarks_019.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_000.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_000.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_001.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_002.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_002.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_003.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_004.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_005.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_005.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_006.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_006.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_007.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_007.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_008.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_008.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_010.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_010.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_011.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_011.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_012.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_012.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_013.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_013.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_014.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_014.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_015.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_016.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_016.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_017.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_017.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_018.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_018.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/B-stop/landmarks_019.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/B-stop/landmarks_019.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_000.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_000.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_001.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_002.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_002.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_003.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_004.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_005.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_005.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_006.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_006.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_007.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_007.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_008.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_008.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_009.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_009.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_010.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_010.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_011.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_011.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_012.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_012.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_013.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_013.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_014.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_014.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_015.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_016.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_016.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_017.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_017.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_018.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_018.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_mediapipe/C-pos_1/landmarks_019.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gesture_Recognition_Data/data_from_mediapipe/C-pos_1/landmarks_019.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data/A-start/failed_010.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data/A-start/failed_017.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data/A-start/failed_018.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data/B-stop/failed_009.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gesture_rec.py" beforeDir="false" afterPath="$PROJECT_DIR$/gesture_rec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matlab.py" beforeDir="false" afterPath="$PROJECT_DIR$/matlab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/color_tracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/color_tracking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hand_data_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/hand_data_collection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joint_checking.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_checking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joints_to_df.py" beforeDir="false" afterPath="$PROJECT_DIR$/joints_to_df.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matlab.py" beforeDir="false" afterPath="$PROJECT_DIR$/matlabcallingdamn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mediapipe_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/mediapipe_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_tracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/object_tracking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/object_tracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_joint_file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output_joint_file.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,12 +66,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.call_matlab.executor": "Run",
+    "Python.color_tracking.executor": "Run",
     "Python.data_collection.executor": "Run",
     "Python.depth.executor": "Run",
     "Python.gesture_rec.executor": "Run",
+    "Python.gesture_rec_model.executor": "Run",
     "Python.hand_data_collection.executor": "Run",
     "Python.joint_checking.executor": "Run",
+    "Python.joints_to_df.executor": "Run",
+    "Python.main.executor": "Run",
     "Python.matlab.executor": "Run",
+    "Python.matlabcallingdamn.executor": "Run",
     "Python.mediapipe_model.executor": "Run",
     "Python.model.executor": "Run",
     "Python.object_tracking.executor": "Run",
@@ -186,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738865565601</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="redoing mediapipe model, added file to double check the hand joints, added and renamed file to convert .json joints into a csv df!">
+      <option name="closed" value="true" />
+      <created>1739216397819</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739216397819</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,6 +161,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="collecting hand data for gesture rec" />
     <MESSAGE value="Changing folder locations and adding an improved Mediapipe hand model!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing folder locations and adding an improved Mediapipe hand model!" />
+    <MESSAGE value="redoing mediapipe model, added file to double check the hand joints, added and renamed file to convert .json joints into a csv df!" />
+    <option name="LAST_COMMIT_MESSAGE" value="redoing mediapipe model, added file to double check the hand joints, added and renamed file to convert .json joints into a csv df!" />
   </component>
 </project>
