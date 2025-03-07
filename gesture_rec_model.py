@@ -15,7 +15,7 @@ from sklearn.metrics import classification_report
 
 # Load dataset
 working_dir = os.getcwd()
-df = pd.read_csv(working_dir + '/output_joint_file_2.csv')
+df = pd.read_csv(working_dir + '/hand_xyz_coordinates.csv')
 
 # Drop non-numeric columns
 df.drop(columns=['source_file', 'source_directory'], inplace=True, errors='ignore')
@@ -79,4 +79,4 @@ y_pred_classes = np.argmax(y_pred, axis=1)
 print(classification_report(y_val, y_pred_classes, target_names=label_encoder.classes_))
 
 
-model.save('gesture_model.h5')
+model.save('gesture_model2.h5')

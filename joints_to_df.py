@@ -5,7 +5,7 @@ import pandas as pd
 
 working_dir = os.getcwd()
 # Define the path to the main JSON directory
-JSON_PATH = working_dir+'/hand_data_extended_from_mediapipe'
+JSON_PATH = working_dir+'/hand_data_xyz_coords'
 
 data_list = []
 
@@ -14,8 +14,6 @@ data_list = []
 # 1) current directory path being traversed, this can be 'main_dir' or 'main_dir/subfolder1', etc.
 # 2) subdirectory names in the main path, and
 # 3) the file names in the current directory path.
-
-
 for dirpath, _, filenames in os.walk(JSON_PATH):
    for file in filenames:
        if file.endswith('.json'):  # Only process .json files
@@ -42,6 +40,6 @@ df.columns = [col.replace('.', '_') for col in df.columns]
 print(df)
 for columns in df.columns:
    print(columns)
-df.to_csv('output_joint_file_2.csv', index=False)
+df.to_csv('hand_xyz_coordinates.csv', index=False)
 
 

@@ -6,9 +6,9 @@ import json
 working_dir = os.getcwd()
 # Paths
 MAIN_PATH = working_dir+'/hand_data_extended'
-OUTPUT_PATH = 'hand_data_extended_from_mediapipe'
+OUTPUT_PATH = 'hand_data_xyz_coords'
 GESTURE_CLASSES = os.listdir(MAIN_PATH)
-FAILED_DATA = 'failed_data222'
+FAILED_DATA = 'failed_data333'
 
 # MediaPipe setup
 mp_drawing = mp.solutions.drawing_utils
@@ -57,7 +57,8 @@ for GESTURE_CLASS in GESTURE_CLASSES:
                    landmark_name = mp_hands.HandLandmark(idd).name
                    landmarks_dict[landmark_name] = {
                        "x": landmark.x,
-                       "y": landmark.y
+                       "y": landmark.y,
+                       'z': landmark.z
                    }
 
                # Create output class folder

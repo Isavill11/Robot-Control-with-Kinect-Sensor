@@ -40,8 +40,6 @@ def draw_landmarks(image, landmarks, image_width, image_height):
            cv2.line(image, (x1, y1), (x2, y2), CONNECTION_COLOR, 2)
 
 
-
-
 # Process all JSON files
 for gesture_class in os.listdir(JSON_PATH):
    gesture_folder = os.path.join(JSON_PATH, gesture_class)

@@ -7,18 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b3afc97-0b0a-4a54-a4f8-ed36951e1e89" name="Changes" comment="redoing mediapipe model, added file to double check the hand joints, added and renamed file to convert .json joints into a csv df!">
-      <change afterPath="$PROJECT_DIR$/gesture_rec_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_joint_file_2.csv" afterDir="false" />
+    <list default="true" id="4b3afc97-0b0a-4a54-a4f8-ed36951e1e89" name="Changes" comment="created gesture rec model and initialized matlab scorebot control from python!">
+      <change afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/live_joint_checking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/color_tracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/color_tracking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hand_data_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/hand_data_collection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gesture_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/gesture_model.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gesture_rec_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/gesture_rec_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/joint_checking.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_checking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/joints_to_df.py" beforeDir="false" afterPath="$PROJECT_DIR$/joints_to_df.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matlab.py" beforeDir="false" afterPath="$PROJECT_DIR$/matlabcallingdamn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mediapipe_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/mediapipe_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_tracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_joint_file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output_joint_file.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,14 +66,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.call_matlab.executor": "Run",
+    "Python.classes.executor": "Run",
     "Python.color_tracking.executor": "Run",
     "Python.data_collection.executor": "Run",
     "Python.depth.executor": "Run",
     "Python.gesture_rec.executor": "Run",
     "Python.gesture_rec_model.executor": "Run",
+    "Python.gui.executor": "Run",
     "Python.hand_data_collection.executor": "Run",
     "Python.joint_checking.executor": "Run",
     "Python.joints_to_df.executor": "Run",
+    "Python.live_joint_checking.executor": "Run",
     "Python.main.executor": "Run",
     "Python.matlab.executor": "Run",
     "Python.matlabcallingdamn.executor": "Run",
@@ -84,7 +86,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2",
+    "last_opened_file_path": "C:/Users/Administrator/PycharmProjects/matlab_test",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -143,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739216397819</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="created gesture rec model and initialized matlab scorebot control from python!">
+      <option name="closed" value="true" />
+      <created>1740171059456</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740171059456</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +172,18 @@
     <MESSAGE value="collecting hand data for gesture rec" />
     <MESSAGE value="Changing folder locations and adding an improved Mediapipe hand model!" />
     <MESSAGE value="redoing mediapipe model, added file to double check the hand joints, added and renamed file to convert .json joints into a csv df!" />
-    <option name="LAST_COMMIT_MESSAGE" value="redoing mediapipe model, added file to double check the hand joints, added and renamed file to convert .json joints into a csv df!" />
+    <MESSAGE value="created gesture rec model and initialized matlab scorebot control from python!" />
+    <option name="LAST_COMMIT_MESSAGE" value="created gesture rec model and initialized matlab scorebot control from python!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/joints_to_df.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

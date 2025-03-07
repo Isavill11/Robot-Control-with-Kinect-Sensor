@@ -49,18 +49,12 @@ def draw_landmarks(image, landmarks, image_width, image_height):
 
 while True:
     try:
-        print("hi")
         color_image = get_latest_frame()
         image_height, image_width, _ = color_image.shape
 
         with mp_hands.Hands(static_image_mode=True, max_num_hands=1, min_detection_confidence=0.5) as hands:
-
-                # Convert to RGB for MediaPipe
                 rgb_image = cv2.cvtColor(color_image, cv2.COLOR_BGR2RGB)
-                # Process with MediaPipe
                 results = hands.process(rgb_image)
-                print(results)
-                # if results.multi_hand_landmarks:
-                #     draw_landmarks(rgb_image, results, image_width, image_height)
+
     except AttributeError as e:
         print(f"Error: {e}")
