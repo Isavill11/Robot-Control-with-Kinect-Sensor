@@ -1,10 +1,10 @@
 #**Kinect Gesture Recognition and Robotic Arm Control!!!**
 
 
-##Overview
+## Overview
 This project is a work in progress and is part of my undergraduate research at Texas A&M International University. The goal is to create a cost-effective device to facilitate safe human-robot collaboration in manufacturing facilities. The system uses a Kinect One sensor to collect and process video data in real-time to classify objects and hand gestures to control an Intellitek robotic arm. This project integrates computer vision, machine learning, and robotics. 
 
-##Features
+## Features
 * **Live Data Capture:** Uses OpenCV to collect video data from the Kinect sensor.
 * **Object Detection:** Utilizes a YOLOV8 model for real-time object detection and tracking.
 * **Hand Tracking & Gesture Recognition:** Applies Scikit-Learn and Mediapipe Holistic models for hand tracking and gesture classification.
@@ -12,7 +12,7 @@ This project is a work in progress and is part of my undergraduate research at T
 * **Robotic Arm Control:** Translates recognized gestures into commands for a robotic arm.
 * **Data Preprocessing:** Captures, processes, and creates datasets for training object and gesture models.
 
-##Technologies Used
+## Technologies Used
 * **Hardware:** Kinect Sensor
 * **Softwares:**
 *  Scorebase Robotic Control Software
@@ -27,7 +27,7 @@ This project is a work in progress and is part of my undergraduate research at T
 *  matlab.engine
 *  NumPy, Pandas, Matplotlib, etc.
 
-##Installation
+## Installation
 To set up the environment, you first need to make sure you have downloaded *Kinect for Windows SDK 2.0*. Then, install the above libraries and PyKinect2024 to access the Kinect sensor using Python. 
 ```bash
 pip install opencv-python numpy pandas scikit-learn
