@@ -12,20 +12,25 @@ This project is a work in progress and is part of my undergraduate research at T
 * **Robotic Arm Control:** Translates recognized gestures into commands for a robotic arm.
 * **Data Preprocessing:** Captures, processes, and creates datasets for training object and gesture models.
 
+
+
 ## Technologies Used
-* **Hardware:** Kinect Sensor
-* **Softwares:**
-*  Scorebase Robotic Control Software
-*  VS Code
-*  Matlab
-* **Libraries & Frameworks:**
-*  OpenCV
-*  Scikit-Learn
-*  YOLOV8
-*  label-studio
-*  PyKinect2024
-*  matlab.engine
-*  NumPy, Pandas, Matplotlib, etc.
+- **Hardware:** Kinect Sensor
+- **Software:**
+  - Scorebase Robotic Control Software
+  - VS Code
+  - Matlab
+- **Libraries & Frameworks:**
+  - OpenCV
+  - Scikit-Learn
+  - YOLOv3
+  - PyKinect2024
+  - Scikit-Learn
+  - YOLOV8
+  - label-studio
+  - PyKinect2024
+  - matlab.engine
+  - NumPy, Pandas, Matplotlib, etc.
 
 ## Installation
 To set up the environment, you first need to make sure you have downloaded *Kinect for Windows SDK 2.0*. Then, install the above libraries and PyKinect2024 to access the Kinect sensor using Python. 
@@ -53,24 +58,18 @@ Depending on the date, I probably have not cleaned up my code. Functional, yes; 
    ```bash
    python gesture_recognition.py
    ```
+6. **Initiate Robotic Arm Control:** Using Matlab.Engine, call function from matlab to control the Robotic Arm. 
 
 ## Future Improvements
 - Create functions for the robotic arm to command it. 
 - Improve model accuracies with more training data.
 - Implement real-time feedback for gesture corrections.
 - Once implemented, optimize robotic arm control response time.
-- Create desktop app for easy usage.
+- Create a desktop app for easy usage.
 - Clean up code. 
 
 ## Contributors
 **Isabella Villarreal**  
-Undergraduate Researcher, Texas A&M International University
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-For any questions or collaboration inquiries, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/isabellaavillarreal/).
-
+Undergraduate Researcher at Texas A&M International University
 
 
