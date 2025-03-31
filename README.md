@@ -1,4 +1,4 @@
-#**Kinect Gesture Recognition and Robotic Arm Control!!!**
+# **Kinect Gesture Recognition and Robotic Arm Control!!!**
 
 
 ## Overview
