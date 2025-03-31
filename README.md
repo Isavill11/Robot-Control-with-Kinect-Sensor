@@ -70,9 +70,13 @@ Depending on the date, I probably have not cleaned up my code. Functional, yes; 
 
 ## Contributors
 **Isabella Villarreal**  
+
 **Karina Silva**
+
 **Frida Castilla**
+
 **Alessandra Vela**
+
 Undergraduate Researchers at Texas A&M International University
 
 
