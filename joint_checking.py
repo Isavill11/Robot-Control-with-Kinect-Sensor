@@ -97,7 +97,7 @@ if not os.path.exists(JSON_PATH):
                        landmarks_dict[landmark_name] = {
                            "x": landmark.x,
                            "y": landmark.y,
-                           # 'z': landmark.z
+                           'z': landmark.z
                        }
 
                    output_class_folder = os.path.join(JSON_PATH, GESTURE_CLASS)
@@ -130,17 +130,19 @@ if option.lower() == 'v':
 
            json_path = os.path.join(gesture_folder, json_file)
 
+           key = cv2.waitKey(25)
+           if key == ord('f'):
+               cv2.destroyAllWindows()
+               break
+           else:
+               cv2.waitKey(0)
 
-           # Load JSON data
            with open(json_path, 'r') as f:
                data = json.load(f)
-
 
            image_name = json_file.replace("landmarks_", "").replace(".json", ".jpg")
            image_path = os.path.join(MAIN_PATH, gesture_class, image_name)
 
-
-           # Load the original image
            image = cv2.imread(image_path)
            if image is None:
                print(f"Error loading image {image_name}")
@@ -155,12 +157,6 @@ if option.lower() == 'v':
            # Display the image
            cv2.imshow(f"{gesture_class} - {image_name}", image)
 
-           key = cv2.waitKey(25)
-           if key == ord('q'):
-               cv2.destroyAllWindows()
-               quit()
-           else:
-               cv2.waitKey(0)
 
     good = input('does everything look good? are you ready to save to csv?(y / n)')
     if good.lower() == 'y':

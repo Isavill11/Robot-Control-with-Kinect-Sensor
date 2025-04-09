@@ -38,6 +38,8 @@ def get_latest_frame():
         return cv2.resize(color_image, (640, 480))
     return None
 
+
+
 while True:
     try:
         color_image = get_latest_frame()
@@ -56,15 +58,17 @@ while True:
                     if len(hand_landmarks.landmark) == 21:  # Ensure 21 landmarks are detected
                         new_row = np.array([[lm.x, lm.y] for lm in hand_landmarks.landmark]).flatten()
                         new_row = new_row.reshape(1, -1)  # Ensure correct shape
-
-                        mp_drawing.draw_landmarks(color_image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
                         # new_input_scaled = scaler.transform(new_row)
 
-                        # Predict
                         y_pred = gesture_model.predict(new_row)
-                        y_pred_class = np.argmax(y_pred, axis=1)
-                        y_pred_class = y_pred_class[0]
+                        y_pred_class = np.argmax(y_pred, axis=1)[0]
+
+                        # print(new_row)
+                        mp_drawing.draw_landmarks(color_image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+                        # new_input_scaled = scaler.transform(new_row)q
                         print(GESTURE_CLASSES[y_pred_class])
+
+
                     else:
                         print("Warning: Hand landmarks detected but not 21 points!")
         cv2.imshow('live joint tracking', color_image)
