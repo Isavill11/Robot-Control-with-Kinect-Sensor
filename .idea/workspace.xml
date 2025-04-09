@@ -8,514 +8,281 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b3afc97-0b0a-4a54-a4f8-ed36951e1e89" name="Changes" comment="simplified python files and implemented live gesture rec.">
-      <change afterPath="$PROJECT_DIR$/_model2.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_scaler2.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/control_scorbot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sort_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Kinect_body_tracking_v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kinect_body_tracking_v2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords.csv" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0000.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0000.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0001.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0002.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0002.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0003.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0004.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0005.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0005.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0006.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0006.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0007.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0007.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0008.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0008.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0009.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0009.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0010.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0010.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0011.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0011.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0012.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0012.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0013.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0013.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0014.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0014.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0015.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0016.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0016.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0017.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0017.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0018.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0018.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0019.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0019.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0020.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0020.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0021.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0021.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0022.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0022.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0023.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0023.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0024.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0024.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0025.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0025.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0026.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0026.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0027.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0027.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0028.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0028.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0029.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0029.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0030.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0030.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0032.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0032.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0033.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0033.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0034.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0034.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0035.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0035.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0036.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0036.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0037.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0037.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0038.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0038.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0039.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0039.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0040.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0040.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0041.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0041.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0042.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0042.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0043.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0043.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0044.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0044.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0045.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0045.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0046.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0046.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0047.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0047.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0048.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0048.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0049.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0049.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0050.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0050.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0051.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0051.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0052.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0052.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0053.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0053.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0054.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0054.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0055.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0055.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0056.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0056.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0057.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0057.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0058.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0058.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0059.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0059.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0060.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0060.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0061.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0061.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0062.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0062.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0063.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0063.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0064.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0064.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0065.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0065.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0066.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0066.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0067.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0067.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0068.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0068.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0069.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0069.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0070.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0070.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0071.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0071.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0072.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0072.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0073.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0073.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0074.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0074.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0075.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0075.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0076.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0076.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0077.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0077.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0078.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0078.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0079.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0079.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0080.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0080.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0081.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0081.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0082.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0082.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0083.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0083.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0084.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0084.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0085.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0085.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0086.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0086.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0087.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0087.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0088.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0088.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0089.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0089.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0090.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0090.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0091.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0091.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0092.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0092.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0093.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0093.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0094.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0094.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0095.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0095.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0096.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0096.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0097.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0097.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0098.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0098.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0099.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/A-sign/landmarks_image_0099.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0000.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0000.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0001.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0002.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0002.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0003.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0004.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0005.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0005.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0006.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0006.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0007.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0007.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0008.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0008.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0009.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0009.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0010.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0010.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0011.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0011.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0012.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0012.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0013.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0013.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0014.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0014.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0015.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0016.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0016.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0017.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0017.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0018.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0018.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0019.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0019.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0020.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0020.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0021.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0021.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0022.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0022.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0023.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0023.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0024.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0024.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0025.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0025.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0026.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0026.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0027.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0027.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0028.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0028.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0029.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0029.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0030.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0030.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0031.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0031.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0032.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0032.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0033.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0033.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0034.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0034.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0035.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0035.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0036.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0036.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0037.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0037.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0038.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0038.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0039.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0039.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0040.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0040.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0041.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0041.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0042.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0042.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0043.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0043.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0044.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0044.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0045.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0045.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0046.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0046.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0047.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0047.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0048.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0048.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0049.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0049.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0050.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0050.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0051.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0051.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0052.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0052.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0053.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0053.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0054.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0054.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0055.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0055.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0056.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0056.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0057.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0057.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0058.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0058.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0059.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0059.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0060.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0060.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0061.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0061.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0062.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0062.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0063.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0063.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0064.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0064.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0065.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0065.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0066.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0066.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0067.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0067.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0068.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0068.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0069.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0069.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0070.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0070.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0071.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0071.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0072.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0072.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0073.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0073.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0074.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0074.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0075.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0075.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0076.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0076.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0077.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0077.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0078.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0078.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0079.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0079.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0080.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0080.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0081.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0081.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0082.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0082.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0083.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0083.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0084.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0084.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0085.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0085.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0086.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0086.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0087.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0087.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0088.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0088.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0089.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0089.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0090.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0090.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0091.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0091.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0092.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0092.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0093.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0093.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0094.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0094.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0095.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0095.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0096.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0096.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0097.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0097.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0098.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0098.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0099.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/B-sign/landmarks_image_0099.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0000.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0000.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0001.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0002.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0002.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0003.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0004.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0005.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0005.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0006.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0006.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0007.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0007.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0008.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0008.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0009.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0009.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0010.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0010.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0011.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0011.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0012.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0012.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0013.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0013.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0014.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0014.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0015.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0016.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0016.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0017.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0017.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0018.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0018.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0019.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0019.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0020.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0020.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0021.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0021.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0022.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0022.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0023.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0023.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0024.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0024.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0025.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0025.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0026.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0026.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0027.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0027.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0028.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0028.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0029.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0029.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0030.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0030.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0031.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0031.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0032.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0032.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0033.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0033.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0034.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0034.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0035.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0035.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0036.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0036.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0037.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0037.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0038.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0038.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0039.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0039.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0040.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0040.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0041.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0041.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0042.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0042.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0043.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0043.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0044.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0044.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0045.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0045.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0046.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0046.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0047.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0047.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0048.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0048.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0049.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0049.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0050.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0050.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0051.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0051.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0052.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0052.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0053.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0053.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0054.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0054.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0055.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0055.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0056.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0056.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0057.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0057.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0058.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0058.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0059.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0059.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0060.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0060.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0061.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0061.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0062.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0062.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0064.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0064.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0065.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0065.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0066.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0066.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0067.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0067.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0068.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0068.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0069.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0069.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0070.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0070.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0071.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0071.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0072.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0072.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0073.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0073.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0074.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0074.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0075.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0075.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0076.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0076.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0077.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0077.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0078.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0078.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0079.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0079.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0080.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0080.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0081.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0081.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0082.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0082.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0083.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0083.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0084.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0084.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0085.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0085.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0086.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0086.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0087.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0087.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0088.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0088.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0089.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0089.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0090.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0090.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0091.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0091.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0092.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0092.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0093.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0093.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0094.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0094.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0095.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0095.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0096.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0096.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0097.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0097.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0098.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0098.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0099.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/Okay/landmarks_image_0099.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0000.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0000.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0001.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0002.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0002.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0003.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0004.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0005.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0005.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0006.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0006.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0007.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0007.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0008.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0008.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0009.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0009.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0010.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0010.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0011.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0011.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0012.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0012.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0013.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0013.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0014.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0014.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0015.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0016.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0016.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0017.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0017.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0018.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0018.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0019.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0019.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0022.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0022.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0023.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0023.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0024.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0024.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0025.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0025.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0026.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0026.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0027.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0027.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0028.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0028.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0029.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0029.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0030.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0030.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0031.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0031.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0032.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0032.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0033.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0033.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0034.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0034.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0035.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0035.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0036.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0036.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0037.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0037.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0038.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0038.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0039.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0039.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0040.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0040.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0041.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0041.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0042.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0042.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0043.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0043.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0044.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0044.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0045.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0045.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0046.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0046.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0047.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0047.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0048.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0048.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0049.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0049.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0050.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0050.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0051.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0051.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0052.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0052.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0053.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0053.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0054.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0054.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0055.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0055.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0056.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0056.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0057.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0057.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0058.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0058.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0059.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0059.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0060.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0060.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0061.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0061.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0062.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0062.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0063.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0063.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0064.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0064.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0065.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0065.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0066.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0066.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0067.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0067.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0068.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0068.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0069.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0069.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0070.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0070.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0071.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0071.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0072.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0072.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0073.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0073.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0074.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0074.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0075.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0075.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0076.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0076.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0077.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0077.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0078.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0078.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0079.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0079.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0080.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0080.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0081.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0081.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0082.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0082.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0083.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0083.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0084.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0084.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0085.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0085.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0086.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0086.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0087.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0087.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0088.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0088.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0089.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0089.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0090.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0090.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0091.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0091.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0092.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0092.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0093.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0093.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0094.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0094.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0095.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0095.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0096.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0096.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0097.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0097.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0098.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0098.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0099.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/peace_sign/landmarks_image_0099.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0000.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0000.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0001.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0002.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0002.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0003.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0004.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0005.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0005.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0006.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0006.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0007.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0007.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0008.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0008.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0009.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0009.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0010.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0010.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0011.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0011.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0012.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0012.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0013.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0013.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0014.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0014.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0015.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0016.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0016.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0017.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0017.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0018.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0018.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0019.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0019.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0020.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0020.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0021.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0021.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0022.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0022.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0023.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0023.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0024.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0024.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0025.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0025.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0026.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0026.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0027.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0027.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0028.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0028.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0029.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0029.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0030.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0030.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0031.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0031.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0032.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0032.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0033.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0033.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0034.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0034.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0035.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0035.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0036.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0036.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0037.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0037.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0038.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0038.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0039.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0039.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0040.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0040.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0041.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0041.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0042.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0042.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0043.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0043.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0044.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0044.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0045.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0045.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0046.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0046.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0047.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0047.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0048.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0048.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0049.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0049.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0050.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0050.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0051.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0051.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0052.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0052.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0053.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0053.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0054.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0054.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0055.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0055.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0056.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0056.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0057.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0057.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0058.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0058.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0059.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0059.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0060.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0060.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0061.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0061.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0062.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0062.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0063.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0063.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0064.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0064.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0065.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0065.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0066.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0066.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0067.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0067.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0068.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0068.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0069.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0069.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0070.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0070.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0071.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0071.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0072.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0072.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0073.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0073.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0074.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0074.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0075.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0075.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0076.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0076.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0077.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0077.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0078.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0078.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0079.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0079.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0080.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0080.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0081.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0081.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0082.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0082.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0083.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0083.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0084.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0084.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0085.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0085.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0086.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0086.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0087.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0087.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0088.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0088.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0089.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0089.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0090.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0090.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0091.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0091.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0092.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0092.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0093.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0093.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0094.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0094.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0095.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0095.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0096.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0096.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0097.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0097.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0098.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0098.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0099.json" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords/thumbs_up/landmarks_image_0099.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords_model.keras" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords_model.keras" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords_scaler.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/closer_data_coords_scaler.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gesture_rec_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/gesture_rec_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joint_checking.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_checking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_model2.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_scaler2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/closer_data_coords_model.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/closer_data_coords_scaler.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/control_scorbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_scorbot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_003.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_004.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_005.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_022.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_023.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_041.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_043.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_044.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_045.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_047.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_065.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_070.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_073.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_085.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_086.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_087.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-start/failed_010.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-start/failed_017.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/A-start/failed_018.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_007.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_011.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_012.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_018.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_039.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_073.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_076.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_081.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_082.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_095.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/B-stop/failed_009.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_007.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_021.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_031.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_036.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_058.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_065.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_077.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_080.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_081.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_086.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_088.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_090.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_092.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_093.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_094.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_095.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_096.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_097.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_098.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/Okay/failed_079.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/palm_up/failed_020.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/palm_up/failed_028.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/palm_up/failed_046.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/palm_up/failed_047.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_007.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_008.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_012.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_013.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_039.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_041.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_047.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_049.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_050.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_051.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_052.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_053.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_066.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_082.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_085.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_086.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_088.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_095.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_004.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_005.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_006.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_026.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_049.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_050.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_051.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_053.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_057.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_058.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_060.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_072.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_073.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_004.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_006.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_007.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_008.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_009.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_010.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_022.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_023.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_025.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_038.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_039.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_040.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_041.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_042.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_043.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_046.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_071.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_073.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_078.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_081.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_082.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_084.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_085.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_086.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_087.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_088.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_089.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_090.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_091.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_092.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_093.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_096.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_097.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_098.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_099.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_003.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_004.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_005.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_022.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_023.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_041.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_043.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_044.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_045.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_047.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_065.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_070.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_073.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_085.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_086.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_087.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_007.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_011.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_012.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_018.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_039.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_073.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_076.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_081.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_082.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_095.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_007.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_021.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_031.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_036.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_058.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_065.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_077.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_080.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_081.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_086.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_088.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_090.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_092.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_093.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_094.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_095.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_096.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_097.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_098.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/Okay/failed_079.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/palm_up/failed_020.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/palm_up/failed_028.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/palm_up/failed_046.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/palm_up/failed_047.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_007.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_008.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_012.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_013.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_039.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_041.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_047.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_049.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_050.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_051.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_052.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_053.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_066.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_082.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_085.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_086.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_088.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_095.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_004.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_005.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_006.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_026.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_049.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_050.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_051.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_053.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_057.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_058.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_060.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_072.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_073.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_004.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_006.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_007.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_008.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_009.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_010.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_022.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_023.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_025.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_038.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_039.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_040.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_041.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_042.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_043.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_046.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_071.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_073.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_078.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_081.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_082.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_084.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_085.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_086.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_087.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_088.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_089.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_090.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_091.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_092.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_093.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_096.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_097.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_098.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_099.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gesture_model.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gesture_model2.h5" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matlabcallingdamn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing_live_gesture_rec.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing_live_gesture_rec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_model.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_scaler.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scaler.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smaller_dataaset.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smaller_dataset_scaler.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_ges_model.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_ges_model.keras" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -538,12 +305,12 @@
     &quot;assignee&quot;: &quot;Isavill11&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Isavill11/Kinect_Ges_rec_2.git&quot;,
-    &quot;accountId&quot;: &quot;c212c186-5e7a-4858-8d06-d8c8c3e9f7b8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Isavill11/Kinect-gesture-rec-2.git",
+    "accountId": "2e2d5710-9b90-4911-a0ea-762d62c53f61"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/matlab.py" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -561,36 +328,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.call_matlab.executor&quot;: &quot;Run&quot;,
-    &quot;Python.classes.executor&quot;: &quot;Run&quot;,
-    &quot;Python.color_tracking.executor&quot;: &quot;Run&quot;,
-    &quot;Python.control_scorbot.executor&quot;: &quot;Run&quot;,
-    &quot;Python.data_collection.executor&quot;: &quot;Run&quot;,
-    &quot;Python.depth.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gesture_rec.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gesture_rec_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gui.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hand_data_collection.executor&quot;: &quot;Run&quot;,
-    &quot;Python.joint_checking.executor&quot;: &quot;Run&quot;,
-    &quot;Python.joints_to_df.executor&quot;: &quot;Run&quot;,
-    &quot;Python.live_joint_checking.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.matlab.executor&quot;: &quot;Run&quot;,
-    &quot;Python.matlabcallingdamn.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mediapipe_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model.executor&quot;: &quot;Run&quot;,
-    &quot;Python.object_tracking.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testing_live_gesture_rec.executor&quot;: &quot;Run&quot;,
-    &quot;Python.yolo_model.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/PycharmProjects/matlab_test&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.call_matlab.executor": "Run",
+    "Python.classes.executor": "Run",
+    "Python.color_tracking.executor": "Run",
+    "Python.control_scorbot.executor": "Run",
+    "Python.data_collection.executor": "Run",
+    "Python.depth.executor": "Run",
+    "Python.gesture_rec.executor": "Run",
+    "Python.gesture_rec_model.executor": "Run",
+    "Python.gui.executor": "Run",
+    "Python.hand_data_collection.executor": "Run",
+    "Python.joint_checking.executor": "Run",
+    "Python.joints_to_df.executor": "Run",
+    "Python.live_joint_checking.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.matlab.executor": "Run",
+    "Python.matlabcallingdamn.executor": "Run",
+    "Python.mediapipe_model.executor": "Run",
+    "Python.model.executor": "Run",
+    "Python.object_tracking.executor": "Run",
+    "Python.sort_file.executor": "Run",
+    "Python.testing_live_gesture_rec.executor": "Run",
+    "Python.yolo_model.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Administrator/PycharmProjects/matlab_test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PycharmProjects\Kinect_body_tracking_v2\Gesture_Recognition_Data" />
@@ -601,7 +375,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-1b1018131e27-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
       </set>
     </attachedChunks>
   </component>
@@ -613,6 +388,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1736277994862</updated>
+      <workItem from="1744222381554" duration="2586000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -673,6 +449,9 @@
     <option name="localTasksCounter" value="8" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -702,7 +481,14 @@
           <line>1</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gesture_rec_model.py</url>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Kinect_gesture_rec_2$sort_file.coverage" NAME="sort_file Coverage Results" MODIFIED="1744223349787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

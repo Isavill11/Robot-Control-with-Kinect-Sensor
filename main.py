@@ -10,6 +10,7 @@ from ultralytics import YOLO
 from pykinect2024 import PyKinect2024, PyKinectRuntime
 from keras._tf_keras.keras.models import load_model
 from google.protobuf.json_format import MessageToDict
+from control_scorbot import execute_matlab_commands
 
 
 CLASSES = {0: ["Person", (204,0,0)], #red
@@ -22,6 +23,13 @@ threshold = 40  ##min number of pixels needed to determine if the colors present
 LANDMARK_COLOR = (0, 255, 0)  # Green
 CONNECTION_COLOR = (255, 0, 0)  # Blue
 GESTURE_CLASSES = os.listdir('C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/closer_data_coords')
+
+gesture_timer = None
+current_gesture = None
+GESTURE_HOLD_TIME = 3
+last_trigger_time = 0
+cooldown_duration = 10
+
 
 
 obj_model = YOLO("C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/runs/detect/train/weights/best.pt")
@@ -54,6 +62,9 @@ def check_for_color(roi, lower_hsv_range, upper_hsv_range):
     return color_count > threshold
 
 def joint_tracking(frame, roi):
+    global gesture_timer, current_gesture
+    predicted_gesture = None
+
     try:
         roi_width, roi_height, _ = roi.shape
         rgb_roi = cv2.cvtColor(roi, cv2.COLOR_BGR2RGB)
@@ -86,6 +97,8 @@ def joint_tracking(frame, roi):
 
             frame[y1:y2, x1:x2] = cv2.addWeighted(frame[y1:y2, x1:x2], 1, roi_mask, 1, 0)
 
+        return predicted_gesture
+
     except Exception as e:
         print(f"Error tracking joints: {e}")
 
@@ -111,7 +124,25 @@ while True:
                     cv2.putText(newest_frame, label, (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color=CLASSES[obj_class][1], thickness=2)
 
                     if check_for_color(roi, COLOR_TO_TRACK["lower_range"], COLOR_TO_TRACK["upper_range"]) and CLASSES[obj_class][0] == "Person":
-                        joint_tracking(newest_frame, roi)
+                        gesture = joint_tracking(newest_frame, roi)
+
+                        if gesture:
+                            if gesture == current_gesture:
+                                if gesture_timer and time.time() - gesture_timer >= GESTURE_HOLD_TIME:
+                                    if time.time() - last_trigger_time >= cooldown_duration:
+                                        print(f"Gesture '{gesture}' held for 3 seconds. Triggering robotic arm.")
+                                        execute_matlab_commands()
+                                        last_trigger_time = time.time()
+                                    else:
+                                        print("Cooldown active. Gesture ignored.")
+                                    gesture_timer = None
+                                    current_gesture = None
+                            else:
+                                current_gesture = gesture
+                                gesture_timer = time.time()
+                        else:
+                            current_gesture = None
+                            gesture_timer = None
                         # print(f"color detected in bounding box:{x1},{y1},{x2},{y2}.")
                         # cv2.putText(newest_frame, "Authorized User!!", (x1+10, y1+50), cv2.FONT_HERSHEY_PLAIN, 2, color = (0, 255, 0), thickness=4)
 
