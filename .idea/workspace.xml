@@ -8,281 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b3afc97-0b0a-4a54-a4f8-ed36951e1e89" name="Changes" comment="simplified python files and implemented live gesture rec.">
-      <change afterPath="$PROJECT_DIR$/sort_file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Kinect_body_tracking_v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kinect_body_tracking_v2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_model2.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_scaler2.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords_model.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/closer_data_coords_scaler.pkl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/control_scorbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_scorbot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_000.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_001.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_003.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_004.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_005.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_022.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_023.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_041.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_043.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_044.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_045.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_047.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_065.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_070.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_073.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_085.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_086.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-sign/failed_087.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-start/failed_010.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-start/failed_017.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/A-start/failed_018.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_007.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_011.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_012.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_018.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_019.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_039.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_073.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_076.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_081.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_082.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_083.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-sign/failed_095.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/B-stop/failed_009.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_007.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_021.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_031.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_036.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_058.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_065.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_077.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_080.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_081.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_083.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_086.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_088.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_090.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_092.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_093.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_094.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_095.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_096.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_097.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/C-sign/failed_098.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/Okay/failed_079.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/palm_up/failed_020.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/palm_up/failed_028.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/palm_up/failed_046.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/palm_up/failed_047.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_007.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_008.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_012.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_013.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_019.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_039.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_041.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_047.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_049.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_050.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_051.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_052.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_053.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_066.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_082.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_085.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_086.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_088.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/peace_sign/failed_095.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_000.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_001.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_004.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_005.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_006.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_026.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_049.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_050.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_051.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_053.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_057.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_058.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_060.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_072.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_down/failed_073.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_000.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_004.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_006.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_007.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_008.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_009.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_010.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_022.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_023.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_025.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_038.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_039.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_040.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_041.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_042.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_043.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_046.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_071.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_073.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_078.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_081.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_082.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_083.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_084.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_085.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_086.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_087.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_088.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_089.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_090.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_091.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_092.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_093.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_096.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_097.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_098.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data222/thumbs_up/failed_099.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_000.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_001.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_003.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_004.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_005.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_022.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_023.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_041.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_043.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_044.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_045.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_047.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_065.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_070.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_073.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_085.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_086.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/A-sign/failed_087.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_007.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_011.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_012.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_018.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_019.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_039.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_073.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_076.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_081.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_082.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_083.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/B-sign/failed_095.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_007.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_021.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_031.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_036.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_058.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_065.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_077.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_080.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_081.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_083.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_086.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_088.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_090.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_092.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_093.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_094.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_095.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_096.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_097.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/C-sign/failed_098.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/Okay/failed_079.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/palm_up/failed_020.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/palm_up/failed_028.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/palm_up/failed_046.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/palm_up/failed_047.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_007.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_008.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_012.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_013.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_019.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_039.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_041.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_047.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_049.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_050.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_051.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_052.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_053.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_066.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_082.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_085.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_086.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_088.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/peace_sign/failed_095.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_000.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_001.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_004.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_005.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_006.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_026.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_049.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_050.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_051.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_053.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_057.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_058.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_060.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_072.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_down/failed_073.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_000.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_004.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_006.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_007.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_008.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_009.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_010.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_022.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_023.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_025.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_038.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_039.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_040.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_041.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_042.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_043.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_046.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_071.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_073.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_078.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_081.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_082.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_083.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_084.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_085.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_086.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_087.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_088.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_089.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_090.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_091.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_092.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_093.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_096.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_097.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_098.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/failed_data333/thumbs_up/failed_099.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gesture_model.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gesture_model2.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_model.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_scaler.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaler.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/smaller_dataaset.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/smaller_dataset_scaler.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_ges_model.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_ges_model.keras" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="updated_project" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -305,12 +39,12 @@
     &quot;assignee&quot;: &quot;Isavill11&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Isavill11/Kinect-gesture-rec-2.git",
-    "accountId": "2e2d5710-9b90-4911-a0ea-762d62c53f61"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Isavill11/Kinect-gesture-rec-2.git&quot;,
+    &quot;accountId&quot;: &quot;c212c186-5e7a-4858-8d06-d8c8c3e9f7b8&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/matlab.py" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -349,13 +83,14 @@
     "Python.mediapipe_model.executor": "Run",
     "Python.model.executor": "Run",
     "Python.object_tracking.executor": "Run",
+    "Python.setup.executor": "Run",
     "Python.sort_file.executor": "Run",
     "Python.testing_live_gesture_rec.executor": "Run",
     "Python.yolo_model.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Administrator/PycharmProjects/matlab_test",
+    "last_opened_file_path": "C:/Users/Administrator/PycharmProjects/Kinect-gesture-rec-2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -366,6 +101,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\Kinect-gesture-rec-2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PycharmProjects\Kinect_body_tracking_v2\Gesture_Recognition_Data" />
       <recent name="C:\Users\Administrator\PycharmProjects\Kinect_body_tracking_v2\All_Yolo_Data" />
@@ -375,8 +113,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
-        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+        <option value="bundled-python-sdk-1b1018131e27-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.180" />
       </set>
     </attachedChunks>
   </component>
@@ -457,7 +194,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="updated_project" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
