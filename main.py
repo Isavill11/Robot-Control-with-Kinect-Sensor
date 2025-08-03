@@ -10,7 +10,7 @@ from ultralytics import YOLO
 from pykinect2024 import PyKinect2024, PyKinectRuntime
 from keras._tf_keras.keras.models import load_model
 from google.protobuf.json_format import MessageToDict
-from control_scorbot import execute_matlab_commands
+from Deep_Learning.control_scorbot import execute_matlab_commands
 
 
 CLASSES = {0: ["Person", (204,0,0)], #red
