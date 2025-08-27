@@ -1,10 +1,12 @@
 import os
 import time
+import sys
 import cv2
 import numpy as np
 from pykinect2024 import PyKinect2024, PyKinectRuntime
 from ultralytics import YOLO
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from kinect import MyKinect
 # collects both object and hand gesture data
 
 
@@ -13,34 +15,18 @@ OD_DATA_DIR = 'object_detection_data'  #Change this to make a new file for the d
 OD_CLASSES = ['1', '2']
 OD_DATASET_SIZE = 40 #This is the data size.
 
-working_dir = os.getcwd()
+WORKING_DIR = os.getcwd()
 GR_FRAME_RATE= 1
 DATASET_SIZE = 100  # Per class
 GR_DATA_DIR = 'closer_data'
 HAND_CLASSES = ['A-sign', 'B-sign', 'peace_sign', 'thumbs_up', 'Okay']
+
 OBJ_CLASSES = {0: ["Person", (204,0,0)], #red
                1: ["Robot", (0, 128, 255)], #blue
                }
 model = YOLO("C:/Users/Administrator/PycharmProjects/Kinect_body_tracking_v2/runs/detect/train/weights/best.pt")
-kinect = PyKinectRuntime.PyKinectRuntime(PyKinectRuntime.FrameSourceTypes_Color | PyKinectRuntime.FrameSourceTypes_Depth)
+kinect = MyKinect()
 
-def kinect_color_frame():
-    color_frame = kinect.get_last_color_frame()
-    color_image = np.frombuffer(color_frame, dtype=np.uint8).reshape((1080, 1920, 4))
-    color_image = cv2.cvtColor(color_image, cv2.COLOR_BGRA2BGR)
-    resized_color_image = cv2.resize(color_image, (640, 480))
-    return resized_color_image
-
-def process_and_save(frame, x1, y1, x2, y2, save_path, index):
-    """Crop the frame to the AOI, resize, and save."""
-    if x1 < 0 or y1 < 0 or x2 > frame.shape[1] or y2 > frame.shape[0]:
-        print("Invalid bounding box coordinates!")
-        return index
-    aoi = frame[y1:y2, x1:x2]  # Crop AOI
-    # zoomed_aoi = cv2.resize(aoi, (224, 224))  # Resize for consistency
-    file_path = os.path.join(save_path, f'image_{index:04d}.jpg')
-    cv2.imwrite(file_path, aoi)
-    return index + 1
 
 
 option = input("what kind of data are you collecting? Gesture data or object data? (choose g or o)")
@@ -65,7 +51,7 @@ if option.lower() == 'o':
 
         while True:
             if kinect.has_new_color_frame():
-                kinect_frame = kinect_color_frame()
+                kinect_frame = kinect.kinect_color_frame()
 
                 cv2.putText(kinect_frame, 'Ready? Press "Q" to start.', (100, 50),
                             cv2.FONT_HERSHEY_SIMPLEX, 1.3, (0, 255, 0), 3, cv2.LINE_AA)
@@ -81,7 +67,7 @@ if option.lower() == 'o':
 
             start_time = time.time()
             if kinect.has_new_color_frame():
-                kinect_frame = kinect_color_frame()
+                kinect_frame = kinect.kinect_color_frame()
 
                 image_path = os.path.join(OD_DATA_DIR, class_name, f'{counter}.jpg')
                 cv2.imwrite(image_path, kinect_frame)
@@ -114,7 +100,7 @@ elif option.lower() == 'g':
 
         while True:
             if kinect.has_new_color_frame():
-                frame = kinect_color_frame()
+                frame = kinect.kinect_color_frame()
                 results = model.predict(frame, verbose=False)
 
                 ### this block of code will allow us to display the object prediction regardless
@@ -134,7 +120,7 @@ elif option.lower() == 'g':
                             if not collecting:
                                 cv2.putText(frame, 'Press Q to start collecting...', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
                             if collecting and start_index < DATASET_SIZE:
-                                start_index = process_and_save(frame, x1, y1, x2, y2, class_dir, start_index)
+                                start_index = kinect.process_and_save(frame, x1, y1, x2, y2, class_dir, start_index)
                                 time.sleep(0.1)
                                 print( f'Saved image {start_index} for class {class_name} with bounding box coordinates: {x1},{y1},{x2},{y2}')
 
