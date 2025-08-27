@@ -7,7 +7,7 @@ OBJ_CLASSES = {0: ["Person", (204,0,0)], #red
            1: ["Robot", (0, 128, 255)],} #blue
 
 COLOR_TO_TRACK = {"lower_range": np.array([10, 150, 150]),
-                  "upper_range": np.array([25, 255, 255])} # the rgb range for whatever color
+       "upper_range": np.array([25, 255, 255])} # the rgb range for whatever color
 threshold = 40  ##min number of pixels needed to determine if the colors present.
 
 

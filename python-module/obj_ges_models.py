@@ -11,4 +11,3 @@ scaler = joblib.load('_scaler2.pkl')
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 hand = mp_hands.Hands()
-the 
