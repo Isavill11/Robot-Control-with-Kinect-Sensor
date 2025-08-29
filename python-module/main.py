@@ -1,16 +1,10 @@
 from kinect import MyKinect
 from body import *
-import os
 import cv2
-import joblib
 import time
-import subprocess
-import mediapipe as mp
-import numpy as np
-from ultralytics import YOLO
 from Deep_Learning.control_scorbot import execute_matlab_commands
 from body import get_latest_frame, check_for_color, joint_tracking
-
+from obj_ges_models import *
 
 
 kinect = MyKinect()

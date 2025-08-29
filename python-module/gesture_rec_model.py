@@ -16,7 +16,7 @@ from keras._tf_keras.keras.optimizers import Adam
 
 
 class GestureModel: 
-    def __init__(self):
+    def __init__(self, model_name):
         self.model = None
         self.X_train = None
         self.X_test = None
@@ -26,7 +26,8 @@ class GestureModel:
         self.scaler = MinMaxScaler()
         self.class_counts = None
         self.num_classes = None
-        self.label_encoder = None  # 
+        self.label_encoder = None  #
+        self.model_name = model_name
 
     def load_data(self, filename="closer_data_coords.csv"): 
         ##load data
@@ -86,39 +87,56 @@ class GestureModel:
 
     def train_model(self):
         
-        joblib.dump(self.scaler, 'gesture_model_scaler.pkl')
-
+        joblib.dump(self.scaler, f'{self.model_name}_scaler.pkl')
+        # ensure output folder exists and save scaler next to the model
+        if not os.path.exists('Trained-Models'):
+            os.makedirs('Trained-Models')
+        scaler_path = os.path.join('Trained-Models', f'{self.model_name}_scaler.pkl')
+        joblib.dump(self.scaler, scaler_path)
+ 
         self.model.compile(optimizer=Adam(learning_rate=0.001),
-                           loss='sparse_categorical_crossentropy',
-                           metrics=['accuracy'])
-
+                            loss='sparse_categorical_crossentropy',
+                            metrics=['accuracy'])
+ 
         early_stopping = EarlyStopping(monitor='val_accuracy', patience=10, mode='max', restore_best_weights=True)
         reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, verbose=1)
-
+ 
         history = self.model.fit(
-            self.X_train, self.y_train,
-            epochs=100, batch_size=32,
-            validation_data=(self.X_test, self.y_test),
-            callbacks=[early_stopping, reduce_lr]
-        )
-
+             self.X_train, self.y_train,
+             epochs=100, batch_size=32,
+             validation_data=(self.X_test, self.y_test),
+             callbacks=[early_stopping, reduce_lr]
+         )
+ 
         # eval
         self.y_pred = np.argmax(self.model.predict(self.X_test), axis=1)
+ 
+        # add new folder if not exists
+        if not os.path.exists('Trained-Models'):
+            os.makedirs('Trained-Models')
 
-        self.model.save('gesture_model.keras')
+        self.model.save(os.path.join('Trained-Models', f'{self.model_name}.keras'))
+        # save trained model next to scaler
+        self.model.save(os.path.join('Trained-Models', f'{self.model_name}.keras'))
+ 
+    def retrain_model(self, previous_model_name, new_data_file):
+        ##Load new data, retrain from saved model, update scaler + weights.
 
-    def retrain_model(self, new_data_file):
-        """Load new data, retrain from saved model, update scaler + weights."""
-        # Load previous model
-        self.model = load_model("gesture_model.keras")
+        # load model
+        self.model = load_model(os.path.join('Trained-Models', f'{previous_model_name}.keras'))
         self.scaler = joblib.load("gesture_model_scaler.pkl")
 
-        # Load new dataset
-        self.load_data(new_data_file)
+        scaler_path = os.path.join('Trained-Models', f'{previous_model_name}_scaler.pkl')
+        if os.path.exists(scaler_path):
+            self.scaler = joblib.load(scaler_path)
+        else:
+            raise FileNotFoundError(f"Scaler not found at {scaler_path}")
 
-        # Re-fit
+        # load_new_data then refit
+        self.load_data(new_data_file)
         self.model.fit(self.X_train, self.y_train, epochs=20, batch_size=32, validation_data=(self.X_test, self.y_test))
-        self.model.save("gesture_model.keras")
+
+        self.model.save(os.path.join('Trained-Models', f'{previous_model_name}.keras'))
 
     def print_model_accuracy(self):
         print(classification_report(self.y_test, self.y_pred, target_names=self.label_encoder.classes_))
