@@ -1,0 +1,55 @@
+
+
+.custom-btn {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2), inset 0 -4px 8px rgba(0,0,0,0.3);
+  background: gray;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:sans-serif
+}
+
+/* STOP Button */
+.custom-btn.stop {
+  background: radial-gradient(circle at 30% 30%, #ff4d4d, #cc0000);
+  border: 2px solid #b30000;
+  
+}
+
+.custom-btn.stop:hover {
+  background: radial-gradient(circle at 30% 30%, #ff6666, #e60000);
+  transform: scale(1.05);
+}
+
+/* START Button */
+.custom-btn.start {
+  background: radial-gradient(circle at 30% 30%, #4dff4d, #009900);
+  border: 2px solid #007a00;
+}
+
+.custom-btn.start:hover {
+  background: radial-gradient(circle at 30% 30%, #66ff66, #00b300);
+  transform: scale(1.05);
+}
+
+/* SETTINGS Button */
+.custom-btn.settings {
+  background: radial-gradient(circle at 30% 30%, #4da6ff, #0047b3);
+  border: 2px solid #003d99;
+  font-size: 1.5rem;
+}
+
+.custom-btn.settings:hover {
+  background: radial-gradient(circle at 30% 30%, #66b3ff, #005ce6);
+  transform: scale(1.05);
+}
