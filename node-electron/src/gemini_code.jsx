@@ -1,11 +1,7 @@
-import React, { useState, useEffect} from 'react';
-import './styles.css';
-import BoundingBox from './BoundingBox';
-import SettingsPanel from './SettingsPanel';
+import React, { useState, useEffect } from 'react';
 
-
-
-function MainScreen() {
+// Main App Component
+function Idk() {
   const [isTracking, setIsTracking] = useState(false);
   const [showBoundingBoxes, setShowBoundingBoxes] = useState(false);
   const [systemStatus, setSystemStatus] = useState('green');
@@ -242,11 +238,10 @@ function MainScreen() {
         <div className="password-prompt-overlay">
           <div className="password-prompt-panel">
             <h2 className="password-prompt-title">Authentication Required</h2>
-
             <p className="password-prompt-label">
                 Please enter the password to access settings.
             </p>
-            <form className='form-container' onSubmit={handlePasswordSubmit}>
+            <form onSubmit={handlePasswordSubmit}>
               <input
                 type="password"
                 className="password-input"
@@ -254,17 +249,14 @@ function MainScreen() {
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
               />
-                <div className="password-error-container">
-                {passwordError && <p className="password-error">{passwordError}</p>}
-               </div>
-
+              {passwordError && <p className="password-error">{passwordError}</p>}
               <button type="submit" className="password-submit-button">Submit</button>
             </form>
             <button className="close-password-prompt" onClick={() => setShowPasswordPrompt(false)}>
               <svg xmlns="http://www.w3.org/2000/svg" className="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
-            </button>   
+            </button>
           </div>
         </div>
       )}
@@ -272,5 +264,4 @@ function MainScreen() {
     </>
   );
 }
-
-export default MainScreen;
+export default Idk;
