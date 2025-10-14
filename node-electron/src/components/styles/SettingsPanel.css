@@ -1,0 +1,373 @@
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.settings-panel {
+  position: relative;
+  background: #111;
+  color: #eee;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 320px;
+  min-height: 240px;
+}
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.settings-title { margin: 0; font-size: 18px; }
+.close-button { background: transparent; border: none; color: #ddd; font-size: 18px; cursor: pointer; }
+
+.settings-main-area { display: flex; flex: 1; min-height: 0; }
+.settings-tabs-nav {
+  width: 170px;
+  border-right: 1px solid rgba(255,255,255,0.04);
+  padding: 12px;
+  box-sizing: border-box;
+}
+.tab-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  background: transparent;
+  color: #ddd;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.tab-active { background: rgba(255,255,255,0.03); }
+
+.settings-content-container { padding: 12px; flex: 1; overflow: auto; }
+
+.resizer {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 6px;
+  bottom: 6px;
+  cursor: se-resize;
+  background: transparent;
+}
+/* optional visual lines in resizer */
+.resizer::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid rgba(255,255,255,0.12);
+  border-bottom: 2px solid rgba(255,255,255,0.12);
+  transform: rotate(45deg);
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+
+
+
+/* --- Settings Panel Styles --- */
+.settings-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: flex;
+    justify-content: flex-end;
+    transition: background-color 0.3s ease;
+}
+
+.settings-panel {
+    width: 90%;
+    max-width: 800px;
+    height: 100%;
+    background-color: #f8fafc;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    overflow-y: auto;
+    transition: transform 0.3s ease-out;
+    resize:both;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 2rem;
+}
+
+.settings-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #4a5568;
+}
+
+.close-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.settings-main-area {
+    display: flex;
+    flex-grow: 1;
+    gap: 2rem;
+}
+
+.settings-tabs-nav {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tab-button {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a5568;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+    background-color: #e2e8f0;
+}
+
+.tab-active {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3);
+}
+
+/* Settings Content */
+.settings-content-container {
+    flex-grow: 1;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.settings-content-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.settings-content-body h3 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.settings-content-body p {
+    color: #4a5568;
+}
+
+.settings-action-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+}
+
+.settings-action-button:hover {
+    opacity: 0.9;
+}
+
+.user-log {
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f1f5f9;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* --- New Password Prompt Styles --- */
+.password-prompt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.password-prompt-panel {
+    background-color: #e2e8f0;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    width: 90%;
+    max-width: 400px;
+    display:flexbox;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    text-align: center;
+}
+
+.password-prompt-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.password-prompt-label {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.password-input {
+    width: 20rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    text-align: center;
+    color: #2d3748;
+}
+
+form {
+  text-align: center;
+}
+
+.password-submit-button {
+    padding: 0.75rem 2rem;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.password-submit-button:hover {
+    background-color: #2563eb;
+}
+
+.password-error-container {
+    padding: 0.5rem;
+    align-items: center;
+}
+
+
+.password-error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.close-password-prompt {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4a5568;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .main-content-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .main-screen-left-column-container,
+    .main-screen-right-column-container {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .settings-main-area {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .settings-tabs-nav {
+        flex: none;
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 0.5rem;
+    }
+    .tab-button {
+        flex-shrink: 0;
+    }
+}
+
+
+
+
+.settings-panel {
+  /* keep other rules — overridden inline width/position used above */
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  z-index: 1000;
+}
+
+/* left-edge handle for horizontal resize (anchored to right) */
+.settings-resize-handle {
+  position: absolute;
+  left: -8px; /* sits just outside the panel */
+  top: 0;
+  bottom: 0;
+  width: 16px; /* A decent grab area */
+  cursor: ew-resize; /* Indicates horizontal resizing */
+  z-index: 1001;
+  /* make it easier to grab on high-DPI screens */
+  background: rgba(0,0,0,0); /* Transparent background */
+}

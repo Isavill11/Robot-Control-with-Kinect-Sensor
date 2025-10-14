@@ -1,16 +1,34 @@
 import React, { useState, useEffect } from 'react';
+import { fetchSystemAnalysis } from '../services/llmService';
+import useSystemStatus from '../hooks/useSystemStatus';
 
-// Main App Component
-function Idk() {
+import './styles/styles.css'
+import BoundingBox from './BoundingBox';
+import SettingsPanel from './SettingsPanel';
+
+
+
+export default function MainScreen(props) {
+  // Use settingsOpen/setSettingsOpen for the panel's open/close state.
+  // The showSettingsPanel/setShowSettingsPanel from your original code is redundant 
+  // if settingsOpen is used to control the panel's visibility. 
+  // I will map your existing logic to use settingsOpen.
+
+  // State for Settings Panel functionality
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [panelWidth, setPanelWidth] = useState(360); // State to hold the current panel width
+
+  // Existing states
   const [isTracking, setIsTracking] = useState(false);
   const [showBoundingBoxes, setShowBoundingBoxes] = useState(false);
-  const [systemStatus, setSystemStatus] = useState('green');
+  const [systemStatus] = useSystemStatus('green');
   const [authorizationColor, setAuthorizationColor] = useState('bg-orange-500');
   const [workerCount, setWorkerCount] = useState(2);
   const [troubleText, setTroubleText] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
+  // Renamed from showSettingsPanel to settingsOpen for consistency with the prompt's suggested pattern.
+  // const [showSettingsPanel, setShowSettingsPanel] = useState(false); 
   const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
   const [passwordError, setPasswordError] = useState('');
@@ -34,37 +52,11 @@ function Idk() {
     setIsLoading(true);
     setTroubleText(null);
     setShowModal(true);
-
-    let queryPrompt = `The SCORBOT Gesture Control Interface is reporting a '${systemStatus}' status. There are ${workerCount} workers in the workspace. Provide a concise, single-paragraph explanation and a potential solution.`;
-
-    if (systemStatus === 'red') {
-      queryPrompt = `The SCORBOT Gesture Control Interface has a critical '${systemStatus}' status. There are ${workerCount} workers in the workspace, and the system detected a person outside of a safety zone with a confidence score of 'Person 0.81'. Provide a concise, single-paragraph explanation and a potential solution.`;
-    } else if (systemStatus === 'yellow') {
-      queryPrompt = `The SCORBOT Gesture Control Interface has a warning '${systemStatus}' status. There are ${workerCount} workers in the workspace, and the system detected a person approaching a safety zone with a confidence score of 'Person 0.78'. Provide a concise, single-paragraph explanation and a potential solution.`;
-    }
-
     try {
-      const payload = {
-        contents: [{ parts: [{ text: queryPrompt }] }],
-        tools: [{ "google_search": {} }],
-        systemInstruction: {
-          parts: [{ text: "Act as a world-class robotic systems analyst. Provide a concise, single-paragraph summary of the key findings and a potential solution." }]
-        },
-      };
-
-      const apiKey = "";
-      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const result = await response.json();
-      const text = result?.candidates?.[0]?.content?.parts?.[0]?.text || "No solution found.";
+      const text = await fetchSystemAnalysis(systemStatus, workerCount, '');
       setTroubleText(text);
-    } catch (error) {
-      console.error("Error with LLM API:", error);
-      setTroubleText("An error occurred while fetching the solution. Please try again.");
+    } catch (err) {
+      setTroubleText('An error occurred while fetching the solution. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -73,12 +65,12 @@ function Idk() {
   const handleSettingsClick = () => {
     setShowPasswordPrompt(true);
   };
-  
+
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
     if (passwordInput === correctPassword) {
       setShowPasswordPrompt(false);
-      setShowSettingsPanel(true);
+      setSettingsOpen(true); // Use setSettingsOpen to show the panel
       setPasswordError('');
       setPasswordInput('');
     } else {
@@ -86,16 +78,21 @@ function Idk() {
       setPasswordInput('');
     }
   };
-  
+
   const closeSettingsPanel = () => {
-    setShowSettingsPanel(false);
+    setSettingsOpen(false); // Use setSettingsOpen to close the panel
+  };
+
+  // Function to update the panel width, passed to SettingsPanel
+  const handleWidthChange = (w) => {
+    setPanelWidth(w);
   };
 
   useEffect(() => {
     const statusInterval = setInterval(() => {
       const statuses = ['green', 'yellow', 'red'];
       const newStatus = statuses[Math.floor(Math.random() * statuses.length)];
-      setSystemStatus(newStatus);
+      // setSystemStatus(newStatus); // Removed as useSystemStatus handles status state internally
     }, 10000);
 
     setWorkerCount(2);
@@ -121,15 +118,25 @@ function Idk() {
 
   return (
     <>
-      <div className="main-screen-container">
-        <div className="main-layout">
-          <div className="header-content-section">
+      <div className="main-screen-root" style={{ display: 'flex', height: '100vh' }}>
+        <div
+          // 🚨 Change class here from "main-content" to "main-layout"
+          className="main-layout" 
+          style={{
+            // Keep the flex and margin styles for resizing functionality
+            flex: 1,
+            transition: 'margin-right 160ms ease',
+            marginRight: settingsOpen ? panelWidth : 0, 
+          }}
+        >
+            <div className="header-content-section">
             <header className="header">
               <h1 className="title">SCORBOT Gesture Control Interface</h1>
             </header>
             <div className="main-content-layout">
               <div className="main-screen-left-column-container">
                 <aside className="control-panel">
+                  {/* ... Existing control panel content ... */}
                   <div className="button-group">
                     <span className="button-label">START/PAUSE LIVE TRACKING</span>
                     <div className="button-ring">
@@ -188,13 +195,14 @@ function Idk() {
                   </div>
                   {showBoundingBoxes && (
                     <div className="overlay">
-                      <BoundingBox/>
+                      <BoundingBox />
                     </div>
                   )}
                 </div>
               </div>
               <div className="main-screen-right-column-container">
                 <aside className="status-panel">
+                  {/* ... Existing status panel content ... */}
                   <div className="status-group">
                     <span className="status-label">SYSTEM STATUS</span>
                     <div className="status-lights-container">
@@ -234,14 +242,17 @@ function Idk() {
           )}
         </div>
       </div>
+
+      {/* PASSWORD FUNCTIONALITY */}
       {showPasswordPrompt && (
         <div className="password-prompt-overlay">
           <div className="password-prompt-panel">
             <h2 className="password-prompt-title">Authentication Required</h2>
+
             <p className="password-prompt-label">
-                Please enter the password to access settings.
+              Please enter the password to access settings.
             </p>
-            <form onSubmit={handlePasswordSubmit}>
+            <form className='form-container' onSubmit={handlePasswordSubmit}>
               <input
                 type="password"
                 className="password-input"
@@ -249,7 +260,10 @@ function Idk() {
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
               />
-              {passwordError && <p className="password-error">{passwordError}</p>}
+              <div className="password-error-container">
+                {passwordError && <p className="password-error">{passwordError}</p>}
+              </div>
+
               <button type="submit" className="password-submit-button">Submit</button>
             </form>
             <button className="close-password-prompt" onClick={() => setShowPasswordPrompt(false)}>
@@ -260,8 +274,14 @@ function Idk() {
           </div>
         </div>
       )}
-      <SettingsPanel isOpen={showSettingsPanel} onClose={closeSettingsPanel} />
+
+      {/* Settings Panel Integration */}
+      <SettingsPanel
+        isOpen={settingsOpen} // Use the consolidated state for visibility
+        onClose={closeSettingsPanel} // Pass the close function
+        initialWidth={panelWidth} // Pass the current width as the initial width
+        onWidthChange={handleWidthChange} // Pass the handler to receive width changes
+      />
     </>
   );
 }
-export default Idk;

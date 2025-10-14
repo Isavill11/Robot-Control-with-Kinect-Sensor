@@ -1,19 +1,13 @@
-import React from 'react';
-import MainScreen from './MainScreen'; // Assuming MainScreen.js is in the same directory
-import Settings from './Settings'; // A new component for your settings screen
+import React, { useState } from 'react';
+import MainScreen from './components/MainScreen';
 
-function App() {
-  const [showSettings, setShowSettings] = useState(false); // A state to manage which screen to show
 
+
+export default function App() {
+  const [showSettings, setShowSettings] = useState(false);
   return (
     <div className="app-container">
-      {showSettings ? (
-        <Settings onClose={() => setShowSettings(false)} />
-      ) : (
-        <MainScreen onSettingsClick={() => setShowSettings(true)} />
-      )}
+      <MainScreen />
     </div>
   );
 }
-
-export default App;
