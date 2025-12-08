@@ -1,9 +1,9 @@
-import './styles/styles.css'
+import '../styles/BoundingBox.css'
 
 
 const BoundingBox = () => {
 const boxes = [
-    { id: 1, top: '20%', left: '10%', width: '25%', height: '30%', color: 'box-blue', label: 'Person 0.95' },
+    { id: 1, top: '50%', left: '10%', width: '25%', height: '30%', color: 'box-blue', label: 'Person 0.95' },
     { id: 2, top: '50%', left: '60%', width: '20%', height: '25%', color: 'box-red', label: 'Safety Zone 0.90' },
 ];
 

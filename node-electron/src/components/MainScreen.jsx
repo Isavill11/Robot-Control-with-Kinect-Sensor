@@ -3,22 +3,16 @@ import { fetchSystemAnalysis } from '../services/llmService';
 import useSystemStatus from '../hooks/useSystemStatus';
 
 import './styles/styles.css'
-import BoundingBox from './BoundingBox';
+import BoundingBox from './visuals/BoundingBox';
 import SettingsPanel from './SettingsPanel';
-
+import Video from './visuals/Video';
 
 
 export default function MainScreen(props) {
-  // Use settingsOpen/setSettingsOpen for the panel's open/close state.
-  // The showSettingsPanel/setShowSettingsPanel from your original code is redundant 
-  // if settingsOpen is used to control the panel's visibility. 
-  // I will map your existing logic to use settingsOpen.
-
-  // State for Settings Panel functionality
+ 
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [panelWidth, setPanelWidth] = useState(360); // State to hold the current panel width
 
-  // Existing states
   const [isTracking, setIsTracking] = useState(false);
   const [showBoundingBoxes, setShowBoundingBoxes] = useState(false);
   const [systemStatus] = useSystemStatus('green');
@@ -32,6 +26,9 @@ export default function MainScreen(props) {
   const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
   const [passwordError, setPasswordError] = useState('');
+
+  // NEW STATE: Tracks if the user is currently authenticated to access settings
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const correctPassword = 'admin';
 
@@ -62,37 +59,34 @@ export default function MainScreen(props) {
     }
   };
 
-  const handleSettingsClick = () => {
-    setShowPasswordPrompt(true);
-  };
-
-  const handlePasswordSubmit = (e) => {
-    e.preventDefault();
-    if (passwordInput === correctPassword) {
-      setShowPasswordPrompt(false);
-      setSettingsOpen(true); // Use setSettingsOpen to show the panel
-      setPasswordError('');
-      setPasswordInput('');
-    } else {
-      setPasswordError('Invalid password. Please try again.');
-      setPasswordInput('');
-    }
-  };
-
-  const closeSettingsPanel = () => {
-    setSettingsOpen(false); // Use setSettingsOpen to close the panel
-  };
-
-  // Function to update the panel width, passed to SettingsPanel
-  const handleWidthChange = (w) => {
-    setPanelWidth(w);
-  };
-
+  
+    const handleSettingsClick = () => {
+      setShowPasswordPrompt(true);
+    };
+  
+    const handlePasswordSubmit = (e) => {
+      e.preventDefault();
+      if (passwordInput === correctPassword) {
+        setShowPasswordPrompt(false);
+        setSettingsOpen(true);
+        setPasswordError('');
+        setPasswordInput('');
+      } else {
+        setPasswordError('Invalid password. Please try again.');
+        setPasswordInput('');
+      }
+    };
+  
+    const closeSettingsPanel = () => {
+      setSettingsOpen(false);
+    };
+  
+  
+  
   useEffect(() => {
     const statusInterval = setInterval(() => {
       const statuses = ['green', 'yellow', 'red'];
       const newStatus = statuses[Math.floor(Math.random() * statuses.length)];
-      // setSystemStatus(newStatus); // Removed as useSystemStatus handles status state internally
     }, 10000);
 
     setWorkerCount(2);
@@ -120,23 +114,21 @@ export default function MainScreen(props) {
     <>
       <div className="main-screen-root" style={{ display: 'flex', height: '100vh' }}>
         <div
-          // 🚨 Change class here from "main-content" to "main-layout"
           className="main-layout" 
           style={{
-            // Keep the flex and margin styles for resizing functionality
             flex: 1,
             transition: 'margin-right 160ms ease',
             marginRight: settingsOpen ? panelWidth : 0, 
-          }}
-        >
+          }}>
             <div className="header-content-section">
             <header className="header">
               <h1 className="title">SCORBOT Gesture Control Interface</h1>
             </header>
-            <div className="main-content-layout">
+
+          <div className='main-content-layout'>
+            <div className='centered-content-wrapper'>
               <div className="main-screen-left-column-container">
                 <aside className="control-panel">
-                  {/* ... Existing control panel content ... */}
                   <div className="button-group">
                     <span className="button-label">START/PAUSE LIVE TRACKING</span>
                     <div className="button-ring">
@@ -184,25 +176,17 @@ export default function MainScreen(props) {
                   </div>
                 </aside>
               </div>
-              <div className="middle-video-content-container">
-                <div className="video-container">
-                  <div className="video-text">
-                    <img
-                      src="https://placehold.co/1080x720/4a5568/ffffff?text=Video+Feed"
-                      alt="Live Gesture Tracking"
-                      className="video-image"
-                    />
-                  </div>
+
+              <div className="main-screen-video-wrapper">
+              <Video/>
                   {showBoundingBoxes && (
                     <div className="overlay">
                       <BoundingBox />
                     </div>
                   )}
                 </div>
-              </div>
               <div className="main-screen-right-column-container">
                 <aside className="status-panel">
-                  {/* ... Existing status panel content ... */}
                   <div className="status-group">
                     <span className="status-label">SYSTEM STATUS</span>
                     <div className="status-lights-container">
@@ -224,7 +208,9 @@ export default function MainScreen(props) {
                 </aside>
               </div>
             </div>
+            </div>
           </div>
+
           {showModal && (
             <div className="modal-overlay">
               <div className="modal-content">
@@ -275,13 +261,10 @@ export default function MainScreen(props) {
         </div>
       )}
 
-      {/* Settings Panel Integration */}
       <SettingsPanel
-        isOpen={settingsOpen} // Use the consolidated state for visibility
-        onClose={closeSettingsPanel} // Pass the close function
-        initialWidth={panelWidth} // Pass the current width as the initial width
-        onWidthChange={handleWidthChange} // Pass the handler to receive width changes
-      />
-    </>
-  );
-}
+          isOpen={settingsOpen}
+          onClose={closeSettingsPanel}
+        />
+      </>
+    );
+  }

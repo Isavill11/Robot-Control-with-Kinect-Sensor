@@ -5,35 +5,36 @@ body {
     font-family: sans-serif;
 }
 
-/* Main Layout */
 .main-screen-root {
     display: flex;
-    /* 🚨 REMOVED: align-items: center; and justify-content: center; 
-       This allows the inner content to align to the top and stretch vertically. */
-    min-height: 100vh;
-    height: auto;
-    background-color: #e2e8f0; /* slate-200 */
-    padding: 2rem; 
+    height: auto; 
+    background-color: #e2e8f0; 
+    padding: 2rem;
+    justify-content: center;
+    width: auto;
 }
 
 
 .main-layout {
     display: flex;
     flex-direction: column;
-    height: auto;
+    max-height: 90vh; 
     background-color: white;
-    border-radius: 1.5rem; /* rounded-3xl */
+    border-radius: 1.5rem; 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    flex-grow: 1;
 }
 
-/* Header and Content */
 .header-content-section {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     padding: 2.5rem;
+    /* Remove rigid height property */
+    height: auto; 
 }
+
 
 .header {
     display: flex;
@@ -48,13 +49,25 @@ body {
     text-align: center;
 }
 
+
+.centered-content-wrapper {
+    display: flex; 
+    align-items: center; 
+    margin: 0 auto; 
+    max-width: 1700px; 
+}
+
+/* Update .main-content-layout to handle the centering */
 .main-content-layout {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: flex-start;
-    gap: 2rem;
+    flex-grow: 1; 
+    overflow: hidden;
 }
+
+
 
 /* Left Column (Controls) */
 .main-screen-left-column-container {
@@ -66,6 +79,7 @@ body {
     background-color: rgba(241, 245, 249, 0.7); /* slate-100/70 */
     border-radius: 1.5rem;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 2rem;
 }
 
 .control-panel,
@@ -74,7 +88,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .button-group,
@@ -190,21 +204,6 @@ body {
     padding: 1rem;
 }
 
-.video-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-color: #374151; /* slate-700 */
-    border-radius: 1.5rem;
-    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-}
-
-.video-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .overlay {
     position: absolute;
@@ -212,19 +211,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.bounding-box {
-    position: absolute;
-    border: 4px solid;
-}
-
-.box-blue {
-    border-color: #60a5fa; /* blue-400 */
-}
-
-.box-red {
-    border-color: #f87171; /* red-400 */
 }
 
 .label {
@@ -259,14 +245,16 @@ body {
     background-color: rgba(241, 245, 249, 0.7); /* slate-100/70 */
     border-radius: 1.5rem;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 3rem;
 }
 
 .status-panel {
     display: flex;
+    padding-top: 3rem;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     width: 100%;
-    gap: 2rem;
+    gap: 7rem;
 }
 
 .status-group {

@@ -1,5 +1,4 @@
-import "./Button.css"
-
+import '../styles/styles.css'
 
 function Button({ label, type = "default", onClick }){
   return (
