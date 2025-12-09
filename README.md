@@ -37,6 +37,17 @@ WIP
 - Implement real-time feedback for gesture corrections.
 - Once implemented, optimize robotic arm control response time.
 
+
+7. **Running WIP GUI**
+
+You will first need to download npm, node package manager. 
+
+Then open the node-electron folder from this repository into its own vscode project. 
+enter 'npm run dev' onto the terminal 
+then you will get a link to a local server where you can develop the gui in real time. 
+
+
+
 ## Contributors
 **Isabella Villarreal**  
 
