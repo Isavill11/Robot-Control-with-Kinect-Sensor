@@ -38,7 +38,7 @@ WIP
 - Once implemented, optimize robotic arm control response time.
 
 
-7. **Running WIP GUI**
+## Running WIP GUI**
 
 You will first need to download npm, node package manager. 
 
